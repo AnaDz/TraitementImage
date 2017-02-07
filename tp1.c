@@ -51,7 +51,7 @@ int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le no
   im5=alloue_image_double(nl,nc); // Partie réelle de l'image après FFT
   im6=alloue_image_double(nl,nc); // Partie imaginaire de l'image après FFT
 
-	/* Calcul de la fft de im7,im4, avec shift */
+	/* Calcul de la fft de im7,im4  */
   fft(im7,im4,im5,im6,nl,nc);
   // Multiplication par la FFT de la gaussienne
   /* A FAIRE : faire la gaussienne, prendre sa FFT, multiplier par le truc au-dessus puis faire FFT inverse (déjà fait en dessous ça)*/
