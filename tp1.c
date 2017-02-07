@@ -6,7 +6,7 @@
 #include <math.h>
 
 float FFTGauss(int u, int v, int N, int M) {
-  float sigma = 1;
+  float sigma = 1.0;
   float res ;
   float ufloat = (float)u;
   float vfloat = (float)v;
@@ -53,17 +53,18 @@ int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le no
 
 	/* Calcul de la fft de im7,im4, avec shift */
   fft(im7,im4,im5,im6,nl,nc);
+  fftshift(im5,im6, im7,im4, nl,nc);
   // Multiplication par la FFT de la gaussienne
   /* A FAIRE : faire la gaussienne, prendre sa FFT, multiplier par le truc au-dessus puis faire FFT inverse (déjà fait en dessous ça)*/
 
   for (int i=0 ; i<nl; i++){
     for (int j=0; j<nc; j++){
-      im5[i][j] = im5[i][j]*FFTGauss(i, j, nl, nc);
-      im6[i][j] = im6[i][j]*FFTGauss(i, j, nl, nc);
+      im7[i][j] = im7[i][j]*FFTGauss(i, j, nl, nc);
+      im4[i][j] = im4[i][j]*FFTGauss(i, j, nl, nc);
     }
 
   }
-
+  fftshift(im7,im4, im5,im6, nl,nc);
 	/* Creation des images pour les parties reelles et imagianires des fft inverses */
   im9=alloue_image_double(nl,nc); // Partie réelle de l'image après FFT et FFT inverse
   im10=alloue_image_double(nl,nc); // Partie imaginaire de l'image après FFT et FFT inverse
