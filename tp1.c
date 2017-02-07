@@ -20,19 +20,13 @@ float FFTGauss(int u, int v, int N, int M) {
   return res;
 }
 
-	/*
-		Question 1
- 	*/
-int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
+void Lissage(char* imgOrigin, char* imgCible){
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
   double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
 
-    // Pas assez d'arguments
-    if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
-
 	/* Lecture d'une image pgm dont le nom est passe sur la ligne de commande */
-  im1=lectureimagepgm(av[1],&nl,&nc);
+  im1=lectureimagepgm(imgOrigin,&nl,&nc);
   if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
 
   // Passage en réels
@@ -75,6 +69,16 @@ int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le no
 	   Suppresion des 0 qui ont servi a completer en utilisant la fonction crop
 	   Sauvegarde au format pgm de cette image qui doit etre identique a 'linverse video
 	   car on a realise la suite fftinv(fft(image))*/
-  ecritureimagepgm(av[2],crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
+  ecritureimagepgm(imgCible,crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
+
+}
+
+	/*
+		Question 1
+ 	*/
+int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
+  // Pas assez d'arguments
+  if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
+  Lissage(av[1], av[2]);
   return EXIT_SUCCESS;
 }
