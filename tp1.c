@@ -6,7 +6,7 @@
 #include <math.h>
 
 float FFTGauss(int u, int v, int N, int M) {
-  float sigma = 1.0;
+  float sigma = 0.5;
   float res ;
   float ufloat = (float)u;
   float vfloat = (float)v;
@@ -20,7 +20,24 @@ float FFTGauss(int u, int v, int N, int M) {
   return res;
 }
 
-double Lissage(char* imgOrigin, char* imgCible){
+float ConvoGauss(double** image, int x, int y, int nl, int nc) {
+  float sigma = 5;
+  int n = 5;
+  int m = 5;
+  float boucle = 0;
+  float res = 0;
+  for (int i = -n; i<=n; i++) {
+    boucle = 0;
+    for (int j = -m; j<=m; j++) {
+      boucle = boucle + exp(-j*j/(2*sigma*sigma)) * image[(x+i+nl)%nl][(y+j+nc)%nc];
+    }
+    res = res + boucle * exp(-i*i/(2*sigma*sigma));
+  }
+  res = res/(2*M_PI*sigma*sigma);
+  return res;
+}
+
+void lissage(char* imgOrigin, char* imgCible){
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
   double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
@@ -45,11 +62,10 @@ double Lissage(char* imgOrigin, char* imgCible){
   im5=alloue_image_double(nl,nc); // Partie réelle de l'image après FFT
   im6=alloue_image_double(nl,nc); // Partie imaginaire de l'image après FFT
 
-	/* Calcul de la fft de im7,im4, avec shift */
+	/* Calcul de la fft de im7,im4  */
   fft(im7,im4,im5,im6,nl,nc);
   fftshift(im5,im6, im7,im4, nl,nc);
   // Multiplication par la FFT de la gaussienne
-  /* A FAIRE : faire la gaussienne, prendre sa FFT, multiplier par le truc au-dessus puis faire FFT inverse (déjà fait en dessous ça)*/
 
   for (int i=0 ; i<nl; i++){
     for (int j=0; j<nc; j++){
@@ -76,12 +92,32 @@ double Lissage(char* imgOrigin, char* imgCible){
   return pr;
 }
 
-	/*
-		Question 1
- 	*/
+void convolution(char* imgOrigin, char* imgCible) {
+  /* Même début que le lissage */
+  int nb,nl,nc, oldnl,oldnc;
+  unsigned char **im2=NULL,** im1=NULL;
+  double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
+
+  im1=lectureimagepgm(imgOrigin,&nl,&nc);
+  if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
+
+  double**im3=imuchar2double(im1,nl,nc);
+  oldnl=nl; oldnc=nc;
+  im7=padimdforfft(im3,&nl,&nc); // Image
+  im8=alloue_image_double(nl,nc);
+  /* Calcul de la convolution */
+  for (int i=0; i<nl; i++) {
+    for (int j=0; j<nc; j++) {
+      im8[i][j] = ConvoGauss(im7, i, j, nl, nc);
+    }
+  }
+
+  ecritureimagepgm(imgCible,crop(imdouble2uchar(im8,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
+}
+
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
   // Pas assez d'arguments
   if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
-  Lissage(av[1], av[2]);
+  convolution(av[1], av[2]);
   return EXIT_SUCCESS;
 }
