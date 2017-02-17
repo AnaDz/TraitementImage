@@ -20,7 +20,7 @@ float FFTGauss(int u, int v, int N, int M) {
   return res;
 }
 
-void Lissage(char* imgOrigin, char* imgCible){
+double Lissage(char* imgOrigin, char* imgCible){
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
   double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
@@ -71,6 +71,9 @@ void Lissage(char* imgOrigin, char* imgCible){
 	   car on a realise la suite fftinv(fft(image))*/
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
 
+  unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&nl,&nc);
+  double pr = psnr(im2, im11, nl, nc) ;
+  return pr;
 }
 
 	/*

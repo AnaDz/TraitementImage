@@ -19,7 +19,7 @@ static void read_header_line(int fd, char *buf) { int i;
   buf[i] = 0;
 }
 
-static int get_pgm_header(int fd, char *magic, int *width, int *height) { char buf[80]; 
+static int get_pgm_header(int fd, char *magic, int *width, int *height) { char buf[80];
   if( !match_key(fd, magic) ) return FALSE;
   read(fd, buf, 1);
   skip_comment(fd, '#', buf);
@@ -31,13 +31,13 @@ static int get_pgm_header(int fd, char *magic, int *width, int *height) { char b
   return TRUE;
 }
 
-static int open_read(char *filename) { int fd; 
+static int open_read(char *filename) { int fd;
   if( (fd = open(filename, O_BINARY|O_RDONLY)) < 0 )
     fprintf(stderr, "can't reset file `%s': %s\n", filename, strerror(errno));
   return fd;
 }
 
-static int open_read_pixmap(char *filename, char *magic, int *width, int *height) { int fd; 
+static int open_read_pixmap(char *filename, char *magic, int *width, int *height) { int fd;
   if( (fd = open_read(filename)) < 0) return fd;
   if( !get_pgm_header(fd, magic, width, height) ) {
       fprintf(stderr, "can't read header of %s\n", filename);
@@ -46,7 +46,7 @@ static int open_read_pixmap(char *filename, char *magic, int *width, int *height
   return fd;
 }
 
-static unsigned char *alloc_pixmap(long size) { unsigned char *data; 
+static unsigned char *alloc_pixmap(long size) { unsigned char *data;
   if( (data = (unsigned char *)malloc(size)) == NULL ) {
     fprintf(stderr, "malloc error\n");
     return NULL;
@@ -85,14 +85,14 @@ static void put_header_line(int fd, char *buf) {
 
 static void put_header_info(int fd, char *mark, char *filename) { }
 
-static void put_pgm_header(int fd, char *magic, int width, int height, char *filename) { char buf[80]; 
+static void put_pgm_header(int fd, char *magic, int width, int height, char *filename) { char buf[80];
   put_header_line(fd, magic);
   put_header_info(fd, "# ", filename);
   sprintf(buf, "%d %d\n255\n", width, height);
   put_header_line(fd, buf);
 }
 
-static int open_write(char *filename) { int fd; 
+static int open_write(char *filename) { int fd;
   if( (fd = open(filename, O_TRUNC|O_CREAT|O_BINARY|O_RDWR,0640)) < 0 )
 /*
   if( (fd = open(filename, O_BINARY|O_CREAT|O_TRUNC|O_RDWR, S_IREAD|S_IWRITE)) < 0 )
@@ -103,7 +103,7 @@ static int open_write(char *filename) { int fd;
 
 static void store_data(int fd, unsigned char *data, long size) { char *buffer;
   int count;
-  
+
   buffer = (char *)data;
   while( size > 0 ) {
     count = IO_LEN;
@@ -114,7 +114,7 @@ static void store_data(int fd, unsigned char *data, long size) { char *buffer;
     }
 }
 
-static void store_pixmap(char *filename, unsigned char *data, int width, int height) { int fd; 
+static void store_pixmap(char *filename, unsigned char *data, int width, int height) { int fd;
   if( (fd = open_write(filename)) < 0 ) return;
   put_pgm_header(fd, MAGIC_PGM, width, height, filename);
   store_data(fd, data, (long)width*height);
@@ -134,7 +134,7 @@ unsigned char ** lectureimagepgm(char *name, int* rows, int* cols) { unsigned ch
   if (p==NULL) return NULL;
   if ( (im=calloc(*rows,sizeof(*im))) == NULL) return NULL;
   for (*im=p,i=1; i< *rows; i++) im[i] = im[i-1]+ *cols;
-  return im; 
+  return im;
 }
         /*
                 Ecriture dnas le fichier "filename" de format pgm d'une image en niveau de gris  de rows lignes et cols colonnes
@@ -169,10 +169,10 @@ double** lectureimagedoubleraw( char *filename, int rows, int cols) { int fd;
   close(fd);
 }
 
-        /*  
+        /*
                 Creation d'une image de d'entiers 8bits non signes de nl lignes et nl colonnes
                 Rq : l'allocation des donnees est faite en une seule allocation
-                        on peut donc utiliser im[i][j] pour acceder a l'element d'indice i,j 
+                        on peut donc utiliser im[i][j] pour acceder a l'element d'indice i,j
                         ou bien *((*im)+i*nc+j) ou (*im)[i*nc+j] comme un tableau 1D
         */
 
@@ -187,7 +187,7 @@ unsigned char ** alloue_image(int nl, int nc) { int i;
 	/*
 		Creation d'une image de reelle double precision de nl lignes et nl colonnes
 		Rq : l'allocation des donnees est faite en une seule allocation
-			on peut donc utiliser im[i][j] pour acceder a l'element d'indice i,j 
+			on peut donc utiliser im[i][j] pour acceder a l'element d'indice i,j
 			ou bien *((*im)+i*nc+j) ou (*im)[i*nc+j] comme un tableau 1D
 	*/
 double ** alloue_image_double(int nl, int nc) { int i;
@@ -198,7 +198,7 @@ double ** alloue_image_double(int nl, int nc) { int i;
   return p;
 }
 
-	/* 	
+	/*
 		Libere la memoire associe a l'image im
 	*/
 void libere_image(unsigned char** im) {
@@ -226,7 +226,7 @@ unsigned char**imdouble2uchar(double** im,int nl, int nc) { int i;
    return res;
 }
 
-        /*  
+        /*
                 Conversion d'une image de reels double en une image 8bits signes
         */
 char**imdouble2char(double** im,int nl, int nc) { int i;
@@ -236,8 +236,8 @@ char**imdouble2char(double** im,int nl, int nc) { int i;
    return res;
 }
 
-	/* 
-		Copie dasn une nouvelle image de la partie de l'image comprise entre les indices (oi,oj) et (fi,fj) de l'image im 
+	/*
+		Copie dasn une nouvelle image de la partie de l'image comprise entre les indices (oi,oj) et (fi,fj) de l'image im
         */
 unsigned char** crop(unsigned char **im,int oi, int oj, int fi, int fj) { int i,j,nl,nc;
   unsigned char ** res;
@@ -249,3 +249,16 @@ unsigned char** crop(unsigned char **im,int oi, int oj, int fi, int fj) { int i,
   return res;
 }
 
+
+double psnr(unsigned char **im1, unsigned char **im2,  int nl, int nc) {
+  double**imO=imuchar2double(im1,nl,nc);
+  double**imF=imuchar2double(im2,nl,nc);
+
+  double res;
+  for (int i=0; i<nl; i++){
+    for (int j=0; j<nc; j++){
+      TODO : CALCULER ! p.3
+    }
+  }
+
+}

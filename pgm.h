@@ -13,7 +13,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #define O_BINARY 0
-#define IO_LEN  (1<<30) 
+#define IO_LEN  (1<<30)
 
 #ifndef FALSE
 #define FALSE (0)
@@ -42,9 +42,9 @@ void fftshift( double** imsr, double** imsi, double** imdr, double** imdi, int n
 int nextpow2( int num );
 int ispowerof2(int num);
 unsigned char** crop(unsigned char **im,int oi, int oj, int fi, int fj);
-double** padimdforfft(double** im, int* pnl, int* pnc); 
-double** padimd(double** im, int nl, int nc, int anl, int anc); 
-double** padimucforfft(unsigned char ** im, int* pnl, int* pnc); 
+double** padimdforfft(double** im, int* pnl, int* pnc);
+double** padimd(double** im, int nl, int nc, int anl, int anc);
+double** padimucforfft(unsigned char ** im, int* pnl, int* pnc);
 double eqm(unsigned char **im1, unsigned char **im2,  int nl, int nc);
 double psnr(unsigned char **im1, unsigned char **im2,  int nl, int nc) ;
 double psnr_double(double** r, double** i, int nl, int nc);
