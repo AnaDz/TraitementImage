@@ -1,9 +1,11 @@
+#include "pgm.h"
+
+#include <math.h>
 #ifndef M_PI
  #define M_PI 3.14159265358979323846
 #endif
 
-#include "pgm.h"
-#include <math.h>
+
 
 float FFTGauss(int u, int v, int N, int M) {
   float sigma = 0.5;
@@ -89,8 +91,8 @@ void lissage(char* imgOrigin, char* imgCible){
   im2 = imdouble2uchar(im9,nl,nc);
   int newnl, newnc;
   unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&newnl,&newnc);
-  //double pr = psnr(im2, im11, newnl, newnc) ;
-  //  printf(" PSNR : %d\n", pr);
+  double pr = psnr(im2, im11, newnl, newnc) ;
+  printf(" PSNR : %f\n", pr);
 }
 
 void convolution(char* imgOrigin, char* imgCible) {
