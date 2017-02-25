@@ -1,6 +1,7 @@
 #include "pgm.h"
 
 #include <math.h>
+#include <time.h>
 #ifndef M_PI
  #define M_PI 3.14159265358979323846
 #endif
@@ -8,7 +9,7 @@
 
 
 float FFTGauss(int u, int v, int N, int M) {
-  float sigma = 0.5;
+  float sigma = 2;
   float res ;
   float ufloat = (float)u;
   float vfloat = (float)v;
@@ -23,7 +24,7 @@ float FFTGauss(int u, int v, int N, int M) {
 }
 
 float ConvoGauss(double** image, int x, int y, int nl, int nc) {
-  float sigma = 5;
+  float sigma = 2;
   int n = 5;
   int m = 5;
   float boucle = 0;
@@ -91,7 +92,7 @@ void lissage(char* imgOrigin, char* imgCible){
   im2 = imdouble2uchar(im9,nl,nc);
   int newnl, newnc;
   unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&newnl,&newnc);
-  double pr = psnr(im2, im11, newnl, newnc) ;
+  double pr = psnr(im2, im1, newnl, newnc) ;
   printf(" PSNR : %f\n", pr);
 }
 
@@ -116,11 +117,24 @@ void convolution(char* imgOrigin, char* imgCible) {
   }
 
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im8,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
+  im2 = imdouble2uchar(im8,nl,nc);
+  int newnl, newnc;
+  unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&newnl,&newnc);
+  double pr = psnr(im2, im11, newnl, newnc) ;
+  printf(" PSNR : %f\n", pr);
 }
 
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
   // Pas assez d'arguments
   if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
+  clock_t debut, fin;
+  debut = clock();
   lissage(av[1], av[2]);
+  fin = clock();
+  printf("durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+  debut = clock();
+  convolution(av[1], av[2]);
+  fin = clock();
+  printf("durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
   return EXIT_SUCCESS;
 }
