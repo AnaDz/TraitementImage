@@ -130,3 +130,6 @@ On voit clairemen que la deuxième méthode est beuacoup plus longue !
 
 COmparer avec la taille du masque ????
 COmment on change la taille du masque ???
+
+
+TODO : voir si le masque aurait pas un impact sur le sigma optimal (c'est sureent le cas)
