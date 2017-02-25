@@ -229,9 +229,9 @@ unsigned char**imdouble2uchar(double** im,int nl, int nc) { int i;
         /*
                 Conversion d'une image de reels double en une image 8bits signes
         */
-char**imdouble2char(double** im,int nl, int nc) { int i;
+char** imdouble2char(double** im,int nl, int nc) { int i;
    char** res;
-   if ( (res=alloue_image(nl,nc))==NULL) return NULL;
+   if ((res=alloue_image(nl,nc))==NULL) return NULL;
    for (i=0; i<nl*nc; i++) (*res)[i]=(char) ((*im)[i]+0.5);
    return res;
 }
@@ -247,18 +247,4 @@ unsigned char** crop(unsigned char **im,int oi, int oj, int fi, int fj) { int i,
      for(j=0; j<nc; j++)
        res[i][j]=im[oi+i][oj+j];
   return res;
-}
-
-
-double psnr(unsigned char **im1, unsigned char **im2,  int nl, int nc) {
-  double**imO=imuchar2double(im1,nl,nc);
-  double**imF=imuchar2double(im2,nl,nc);
-
-  double res;
-  for (int i=0; i<nl; i++){
-    for (int j=0; j<nc; j++){
-      TODO : CALCULER ! p.3
-    }
-  }
-
 }

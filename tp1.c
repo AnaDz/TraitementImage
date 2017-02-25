@@ -86,10 +86,11 @@ void lissage(char* imgOrigin, char* imgCible){
 	   Sauvegarde au format pgm de cette image qui doit etre identique a 'linverse video
 	   car on a realise la suite fftinv(fft(image))*/
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
-
-  unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&nl,&nc);
-  double pr = psnr(im2, im11, nl, nc) ;
-  return pr;
+  im2 = imdouble2uchar(im9,nl,nc);
+  int newnl, newnc;
+  unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&newnl,&newnc);
+  double pr = psnr(im2, im11, newnl, newnc) ;
+  printf(" PSNR : %d\n", pr);
 }
 
 void convolution(char* imgOrigin, char* imgCible) {
@@ -118,6 +119,6 @@ void convolution(char* imgOrigin, char* imgCible) {
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
   // Pas assez d'arguments
   if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
-  convolution(av[1], av[2]);
+  lissage(av[1], av[2]);
   return EXIT_SUCCESS;
 }
