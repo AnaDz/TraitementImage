@@ -8,8 +8,8 @@ essai1: essai1.o pgm.o
 essai2: essai2.o pgm.o fft.o
 	gcc $(LDFLAGS)  $^  -o $(BINDIR)/$@
 
-tp1: tp1.o pgm.o fft.o
-	gcc $(LDFLAGS) $^ -o $(BINDIR)/$@
+tp1: tp1.o pgm.o fft.o divers.o
+	gcc $^ -o $(BINDIR)/$@ $(LDFLAGS)
 
 %.o:%.c
 	gcc $(CFLAGS) $<

@@ -1,0 +1,137 @@
+
+
+
+
+PSNR origine
+pets1
+ PSNR : 18.024970
+pets5
+  PSNR : 11.689623
+pets10
+  PSNR : 9.436875
+
+
+LISSAGE V1
+sigma = 0.5
+Formes peu changées et pas bcp de disparition de points
+
+formes1pets1
+PSNR : 19.807532
+
+formes1pets5
+PSNR : 14.995548
+
+formes1pets10
+PSNR : 12.489802
+
+C'est un peu logique genre moins ya de points plus la corrections est jugées bonne
+
+sigma = 2
+Encores quelques points mais c'est mieux
+par contre apparition de flou
+
+formes1pets1
+PSNR : 22.187404
+
+formes1pets5
+PSNR : 19.313223
+
+formes1pets10
+PSNR : 16.474985
+
+Plus élevé qu'au sigma 0.5 car on approxime mieux l'image grace a cet effet flou
+
+sigma = 5
+images vraiments flous mais on arrive quand meme a deviner la forme
+pets1
+PSNR : 21.333101
+pets5
+PSNR : 19.049299
+pets10
+PSNR : 16.474179
+
+On observe une baisse du psnr = trop flou
+
+sigma = 15
+Image très floues : on voit presque plus la formes
+PSNR <18
+
+Après une recherche dichotomique : le meilleur sigma est 2.1
+pets1
+PSNR : 22.188541
+
+pets5
+PSNR : 19.347233
+
+pets10
+PSNR : 16.510158
+
+LISSAGE V2
+Masque : 5*5
+sigma 0.5
+Changments a peine visibles (genre qqes points changent)
+pets1
+ PSNR : 18.915615
+pets5
+  PSNR : 13.769879
+pets10
+  PSNR : 11.307970
+
+sigma 2
+images nettements améliorées et pas trop floues
+pets1
+  PSNR : 22.197255
+pets5
+  PSNR : 19.394568
+pets10
+  PSNR : 16.578931
+
+PSNR mieux qu'avant car on a une jolie forme et pas trop de points parasites
+
+sigma 5
+images nettement assombrie
+pets1
+ PSNR : 15.400338
+pets5
+  PSNR : 15.544725
+ppets10
+  PSNR : 15.457175
+
+On sent qu'on est moins bien genre bcp + sombre on diffère de l'image d'origine par la luminosité car la forme reste très correcte et pas trop flou
+
+
+sigma : 15
+images très très très sombres (preques noires)
+pets1
+ PSNR : 10.279979
+pets5
+ PSNR : 10.310245
+pets10
+  PSNR : 10.340520
+Bref les PSNR parlent d'eux même
+
+trouver le bon sigma : 2 !
+
+Etonnament on arrive a peu près a la meme image (du moins même psnr) avec les 2 méthodes
+
+NB la taille du masque ne modifie pas le pnsr !
+
+MESURES TEMPORELLES :
+sigma = 2
+
+pets1
+durée convolution spatiale : 0.110580
+durée convolution temporelle : 1.996907
+
+pets5
+durée convolution spatiale : 0.111602
+durée convolution temporelle : 2.015829
+
+pets10
+durée convolution spatiale : 0.103468
+durée convolution temporelle : 2.007866
+
+On voit clairemen que la deuxième méthode est beuacoup plus longue !
+
+COmparer avec la taille du masque ????
+COmment on change la taille du masque ???
