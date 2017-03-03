@@ -1,7 +1,4 @@
 
-
-
-
 PSNR origine
 pets1
  PSNR : 18.024970
@@ -133,5 +130,10 @@ durée convolution temporelle : 2.007866
 
 On voit clairemen que la deuxième méthode est beuacoup plus longue !
 
-COmparer avec la taille du masque ????
-COmment on change la taille du masque ???
+
+Résultat SCRIPT :
+
+
+
+
+TODO : Trouver la loi de proportionalité entre sigma et la taille du masque

@@ -3,37 +3,28 @@
 #include <math.h>
 #include <time.h>
 #ifndef M_PI
-#define M_PI 3.14159265358979323846
+ #define M_PI 3.14159265358979323846
 #endif
 
 
-/**
-* Calcul de la FFT avec un filtre gaussien
-*/
-double FFTGauss(int u, int v, int N, int M) {
-  double sigma = 2;
-  double res ;
-  double udouble = (double)u;
-  double vdouble = (double)v;
-  double Ndouble = (double)N;
-  double Mdouble = (double)M;
-  res = -2*M_PI*M_PI*sigma*sigma;
-  double u1 = (2*udouble-Ndouble)/(2*Ndouble);
-  double v1 = (2*vdouble-Mdouble)/(2*Mdouble);
-  res = res * (u1*u1 + v1*v1) ;
+
+float FFTGauss(int u, int v, int N, int M, float sigma) {
+  float res ;
+  float ufloat = (float)u;
+  float vfloat = (float)v;
+  float Nfloat = (float)N;
+  float Mfloat = (float)M;
+  res = -2*pow((float)M_PI,2)*pow(sigma,2);
+  float u1 = (2*ufloat-Nfloat)/(2*Nfloat);
+  float v1 = (2*vfloat-Mfloat)/(2*Mfloat);
+  res = res * (pow(u1,2) + pow(v1,2)) ;
   res = exp(res);
   return res;
 }
 
-/**
-* Convolution d'une image avec le filtre gaussien
-*/
-double ConvoGauss(double** image, int x, int y, int nl, int nc) {
-  double sigma = 2;
-  int n = 5;
-  int m = 5;
-  double boucle = 0;
-  double res = 0;
+float ConvoGauss(double** image, int x, int y, int nl, int nc, float sigma, int n, int m) {
+  float boucle = 0;
+  float res = 0;
   for (int i = -n; i<=n; i++) {
     boucle = 0;
     for (int j = -m; j<=m; j++) {
@@ -45,31 +36,7 @@ double ConvoGauss(double** image, int x, int y, int nl, int nc) {
   return res;
 }
 
-double ConvolutionMasque(double** image, double filtre[3][3], int x, int y, int nl, int nc) {
-  double resultat = 0;
-  double somme;
-  for(int i = -1; i <= 1; i++) {
-    somme = 0;
-    for (int j = -1; j <= 1; j++) {
-      somme += image[(x+i+nl)%nl][(y+j+nc)%nc]*filtre[1+i][1+j];
-    }
-    resultat += somme;
-  }
-  return resultat;
-}
-
-/**
-* Calcule le module du gradient de l'image aux coordonnées (x, y)
-*/
-double ModuleGradientSobel(double** image, int x, int y, int nl, int nc) {
-  double M1[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
-  double M2[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
-  double Gx = ConvolutionMasque(image, M1, x, y, nl, nc);
-  double Gy = ConvolutionMasque(image, M2, x, y, nl, nc);
-  return sqrt(Gx*Gx + Gy*Gy);
-}
-
-void lissage_temporel(char* imgOrigin, char* imgCible) {
+void lissage_temporel(char* imgOrigin, char* imgCible, float sigma){
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
   double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
@@ -101,8 +68,8 @@ void lissage_temporel(char* imgOrigin, char* imgCible) {
 
   for (int i=0 ; i<nl; i++){
     for (int j=0; j<nc; j++){
-      im7[i][j] = im7[i][j]*FFTGauss(i, j, nl, nc);
-      im4[i][j] = im4[i][j]*FFTGauss(i, j, nl, nc);
+      im7[i][j] = im7[i][j]*FFTGauss(i, j, nl, nc, sigma);
+      im4[i][j] = im4[i][j]*FFTGauss(i, j, nl, nc, sigma);
     }
 
   }
@@ -120,12 +87,12 @@ void lissage_temporel(char* imgOrigin, char* imgCible) {
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
   im2 = imdouble2uchar(im9,nl,nc);
   int newnl, newnc;
-  unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&newnl,&newnc);
-  double pr = psnr(im2, im1, newnl, newnc) ;
+  unsigned char** im11 = lectureimagepgm("images/formes1.pgm",&newnl,&newnc);
+  double pr = psnr(im2, im11, newnl, newnc) ;
   printf(" PSNR : %f\n", pr);
 }
 
-void lissage_spatial(char* imgOrigin, char* imgCible) {
+void lissage_spatial(char* imgOrigin, char* imgCible, float sigma, int n, int m) {
   /* Même début que le lissage */
   int nb,nl,nc, oldnl,oldnc;
   unsigned char **im2=NULL,** im1=NULL;
@@ -136,12 +103,12 @@ void lissage_spatial(char* imgOrigin, char* imgCible) {
 
   double**im3=imuchar2double(im1,nl,nc);
   oldnl=nl; oldnc=nc;
-  im7=padimdforfft(im3,&nl,&nc); // Image // A-T-ON BESOIN DE CELA ALORS QU'ON NE FAIT PAS LA FFT ?
-  im8=alloue_image_double(nl,nc); // Image après convolution
+//  im7=padimdforfft(im3,&nl,&nc); // Image
+  im8=alloue_image_double(nl,nc);
   /* Calcul de la convolution */
   for (int i=0; i<nl; i++) {
     for (int j=0; j<nc; j++) {
-      im8[i][j] = ConvoGauss(im7 , i, j, nl, nc);
+      im8[i][j] = ConvoGauss(im3, i, j, nl, nc, sigma, n, m);
     }
   }
 
@@ -153,50 +120,22 @@ void lissage_spatial(char* imgOrigin, char* imgCible) {
   printf(" PSNR : %f\n", pr);
 }
 
-void detection_contours(char* imgOrigin, char* imgCible) {
-  int nb,nl,nc, oldnl,oldnc;
-  unsigned char **im2=NULL,** im1=NULL;
-  double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
-
-  im1=lectureimagepgm(imgOrigin,&nl,&nc);
-  if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
-
-  double** im3=imuchar2double(im1,nl,nc);
-  oldnl=nl; oldnc=nc;
-  im8=alloue_image_double(nl, nc);
-  double moy=0;
-  for (int i=0; i<nl; i++) {
-    for (int j=0; j<nc; j++) {
-      im8[i][j] = ModuleGradientSobel(im3, i, j, nl, nc);
-      moy += im8[i][j];
-    }
-  }
-  moy = moy/(nl*nc);
-  for (int i=0; i<nl; i++) {
-    for (int j=0; j<nc; j++) {
-      if (im8[i][j] >= moy) {
-        im3[i][j] = 0;
-      } else {
-        im3[i][j] = 255;
-      }
-    }
-  }
-  ecritureimagepgm(imgCible,crop(imdouble2uchar(im3,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
-  im2 = imdouble2uchar(im3,nl,nc);
-}
-
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
   // Pas assez d'arguments
-  if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
-  /*clock_t debut, fin;
+  if (ac < 7) {printf("Usage : %s entree sortie1 sortie2 n m sigma \n",av[0]); exit(1); }
+
+  float sigma = atof(av[6]);
+  int n_masque = atoi(av[4]);
+  int m_masque = atoi(av[5]);
+
+  clock_t debut, fin;
   debut = clock();
-  lissage_temporel(av[1], av[2]);
+  lissage_temporel(av[1], av[2], sigma);
   fin = clock();
-  printf("Durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+  printf("durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
   debut = clock();
-  lissage_spatial(av[1], av[2]);
+  lissage_spatial(av[1], av[3], sigma, n_masque, m_masque);
   fin = clock();
-  printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);*/
-  detection_contours(av[1], av[2]);
+  printf("durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
   return EXIT_SUCCESS;
 }
