@@ -8,8 +8,7 @@
 
 
 
-float FFTGauss(int u, int v, int N, int M) {
-  float sigma = 2;
+float FFTGauss(int u, int v, int N, int M, float sigma) {
   float res ;
   float ufloat = (float)u;
   float vfloat = (float)v;
@@ -23,10 +22,7 @@ float FFTGauss(int u, int v, int N, int M) {
   return res;
 }
 
-float ConvoGauss(double** image, int x, int y, int nl, int nc) {
-  float sigma = 2;
-  int n = 5;
-  int m = 5;
+float ConvoGauss(double** image, int x, int y, int nl, int nc, float sigma, int n, int m) {
   float boucle = 0;
   float res = 0;
   for (int i = -n; i<=n; i++) {
@@ -40,7 +36,7 @@ float ConvoGauss(double** image, int x, int y, int nl, int nc) {
   return res;
 }
 
-void lissage_temporel(char* imgOrigin, char* imgCible){
+void lissage_temporel(char* imgOrigin, char* imgCible, float sigma){
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
   double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
@@ -72,8 +68,8 @@ void lissage_temporel(char* imgOrigin, char* imgCible){
 
   for (int i=0 ; i<nl; i++){
     for (int j=0; j<nc; j++){
-      im7[i][j] = im7[i][j]*FFTGauss(i, j, nl, nc);
-      im4[i][j] = im4[i][j]*FFTGauss(i, j, nl, nc);
+      im7[i][j] = im7[i][j]*FFTGauss(i, j, nl, nc, sigma);
+      im4[i][j] = im4[i][j]*FFTGauss(i, j, nl, nc, sigma);
     }
 
   }
@@ -92,11 +88,11 @@ void lissage_temporel(char* imgOrigin, char* imgCible){
   im2 = imdouble2uchar(im9,nl,nc);
   int newnl, newnc;
   unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&newnl,&newnc);
-  double pr = psnr(im2, im1, newnl, newnc) ;
+  double pr = psnr(im2, im11, newnl, newnc) ;
   printf(" PSNR : %f\n", pr);
 }
 
-void lissage_spatial(char* imgOrigin, char* imgCible) {
+void lissage_spatial(char* imgOrigin, char* imgCible, float sigma, int n, int m) {
   /* Même début que le lissage */
   int nb,nl,nc, oldnl,oldnc;
   unsigned char **im2=NULL,** im1=NULL;
@@ -107,12 +103,11 @@ void lissage_spatial(char* imgOrigin, char* imgCible) {
 
   double**im3=imuchar2double(im1,nl,nc);
   oldnl=nl; oldnc=nc;
-  im7=padimdforfft(im3,&nl,&nc); // Image
   im8=alloue_image_double(nl,nc);
   /* Calcul de la convolution */
   for (int i=0; i<nl; i++) {
     for (int j=0; j<nc; j++) {
-      im8[i][j] = ConvoGauss(im7, i, j, nl, nc);
+      im8[i][j] = ConvoGauss(im3, i, j, nl, nc, sigma, n, m);
     }
   }
 
@@ -126,15 +121,20 @@ void lissage_spatial(char* imgOrigin, char* imgCible) {
 
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
   // Pas assez d'arguments
-  if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
+  if (ac < 4) {printf("Usage : %s entree sortie1 sortie2 \n",av[0]); exit(1); }
+
+  float sigma = 2;
+  int n_masque = 5;
+  int m_masque = 5;
+
   clock_t debut, fin;
   debut = clock();
-  lissage_temporel(av[1], av[2]);
-  fin = clock();
-  printf("durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
-  debut = clock();
-  lissage_spatial(av[1], av[2]);
+  lissage_temporel(av[1], av[2], sigma);
   fin = clock();
   printf("durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+  debut = clock();
+  lissage_spatial(av[1], av[3], sigma, n_masque, m_masque);
+  fin = clock();
+  printf("durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
   return EXIT_SUCCESS;
 }
