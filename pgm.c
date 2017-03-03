@@ -257,7 +257,7 @@ double psnr(unsigned char **im1, unsigned char **im2,  int nl, int nc) {
   double res;
   for (int i=0; i<nl; i++){
     for (int j=0; j<nc; j++){
-      TODO : CALCULER ! p.3
+      //TODO : CALCULER ! p.3
     }
   }
 

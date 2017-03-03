@@ -6,7 +6,7 @@
 #include <math.h>
 
 float FFTGauss(int u, int v, int N, int M) {
-  float sigma = 0.5;
+  float sigma = 5;
   float res ;
   float ufloat = (float)u;
   float vfloat = (float)v;
@@ -22,8 +22,8 @@ float FFTGauss(int u, int v, int N, int M) {
 
 float ConvoGauss(double** image, int x, int y, int nl, int nc) {
   float sigma = 5;
-  int n = 5;
-  int m = 5;
+  int n = 10;
+  int m = 10;
   float boucle = 0;
   float res = 0;
   for (int i = -n; i<=n; i++) {
@@ -87,9 +87,9 @@ void lissage(char* imgOrigin, char* imgCible){
 	   car on a realise la suite fftinv(fft(image))*/
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
 
-  unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&nl,&nc);
-  double pr = psnr(im2, im11, nl, nc) ;
-  return pr;
+  //unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&nl,&nc);
+  //double pr = psnr(im2, im11, nl, nc) ;
+  //return pr;
 }
 
 void convolution(char* imgOrigin, char* imgCible) {
@@ -118,6 +118,7 @@ void convolution(char* imgOrigin, char* imgCible) {
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
   // Pas assez d'arguments
   if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
-  convolution(av[1], av[2]);
+  lissage(av[1], av[2]);
+  //convolution(av[1], av[2]);
   return EXIT_SUCCESS;
 }
