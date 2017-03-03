@@ -1,3 +1,7 @@
+
+
+
+
 PSNR origine
 pets1
  PSNR : 18.024970
@@ -63,6 +67,7 @@ pets10
 PSNR : 16.510158
 
 LISSAGE V2
+Masque : 5*5
 sigma 0.5
 Changments a peine visibles (genre qqes points changent)
 pets1
@@ -109,7 +114,7 @@ trouver le bon sigma : 2 !
 
 Etonnament on arrive a peu près a la meme image (du moins même psnr) avec les 2 méthodes
 
-
+NB la taille du masque ne modifie pas le pnsr !
 
 MESURES TEMPORELLES :
 sigma = 2
@@ -130,6 +135,3 @@ On voit clairemen que la deuxième méthode est beuacoup plus longue !
 
 COmparer avec la taille du masque ????
 COmment on change la taille du masque ???
-
-
-TODO : voir si le masque aurait pas un impact sur le sigma optimal (c'est sureent le cas)
