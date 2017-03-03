@@ -114,7 +114,7 @@ void lissage_spatial(char* imgOrigin, char* imgCible, float sigma, int n, int m)
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im8,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
   im2 = imdouble2uchar(im8,nl,nc);
   int newnl, newnc;
-  unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&newnl,&newnc);
+  unsigned char** im11 = lectureimagepgm("images/formes1.pgm",&newnl,&newnc);
   double pr = psnr(im2, im11, newnl, newnc) ;
   printf(" PSNR : %f\n", pr);
 }
