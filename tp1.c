@@ -40,7 +40,7 @@ float ConvoGauss(double** image, int x, int y, int nl, int nc) {
   return res;
 }
 
-void lissage(char* imgOrigin, char* imgCible){
+void lissage_temporel(char* imgOrigin, char* imgCible){
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
   double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
@@ -96,7 +96,7 @@ void lissage(char* imgOrigin, char* imgCible){
   printf(" PSNR : %f\n", pr);
 }
 
-void convolution(char* imgOrigin, char* imgCible) {
+void lissage_spatial(char* imgOrigin, char* imgCible) {
   /* Même début que le lissage */
   int nb,nl,nc, oldnl,oldnc;
   unsigned char **im2=NULL,** im1=NULL;
@@ -129,11 +129,11 @@ int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le no
   if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
   clock_t debut, fin;
   debut = clock();
-  lissage(av[1], av[2]);
+  lissage_temporel(av[1], av[2]);
   fin = clock();
   printf("durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
   debut = clock();
-  convolution(av[1], av[2]);
+  lissage_spatial(av[1], av[2]);
   fin = clock();
   printf("durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
   return EXIT_SUCCESS;
