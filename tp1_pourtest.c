@@ -87,7 +87,7 @@ void lissage_temporel(char* imgOrigin, char* imgCible, float sigma){
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
   im2 = imdouble2uchar(im9,nl,nc);
   int newnl, newnc;
-  unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&newnl,&newnc);
+  unsigned char** im11 = lectureimagepgm("images/formes1.pgm",&newnl,&newnc);
   double pr = psnr(im2, im11, newnl, newnc) ;
   printf(" PSNR : %f\n", pr);
 }
