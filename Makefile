@@ -11,6 +11,12 @@ essai2: essai2.o pgm.o fft.o
 tp1: tp1.o pgm.o fft.o divers.o
 	gcc $^ -o $(BINDIR)/$@ $(LDFLAGS)
 
+PNSR: PNSR.o pgm.o divers.o
+	gcc $^ -o $(BINDIR)/$@ $(LDFLAGS)
+
+tp1_pourtest: tp1_pourtest.o pgm.o fft.o divers.o
+	gcc $^ -o $(BINDIR)/$@ $(LDFLAGS)
+
 %.o:%.c
 	gcc $(CFLAGS) $<
 
