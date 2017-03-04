@@ -8,23 +8,23 @@
 
 
 
-float FFTGauss(int u, int v, int N, int M, float sigma) {
-  float res ;
-  float ufloat = (float)u;
-  float vfloat = (float)v;
-  float Nfloat = (float)N;
-  float Mfloat = (float)M;
-  res = -2*pow((float)M_PI,2)*pow(sigma,2);
-  float u1 = (2*ufloat-Nfloat)/(2*Nfloat);
-  float v1 = (2*vfloat-Mfloat)/(2*Mfloat);
+double FFTGauss(int u, int v, int N, int M, double sigma) {
+  double res ;
+  double udouble = (double)u;
+  double vdouble = (double)v;
+  double Ndouble = (double)N;
+  double Mdouble = (double)M;
+  res = -2*pow((double)M_PI,2)*pow(sigma,2);
+  double u1 = (2*udouble-Ndouble)/(2*Ndouble);
+  double v1 = (2*vdouble-Mdouble)/(2*Mdouble);
   res = res * (pow(u1,2) + pow(v1,2)) ;
   res = exp(res);
   return res;
 }
 
-float ConvoGauss(double** image, int x, int y, int nl, int nc, float sigma, int n, int m) {
-  float boucle = 0;
-  float res = 0;
+double ConvoGauss(double** image, int x, int y, int nl, int nc, double sigma, int n, int m) {
+  double boucle = 0;
+  double res = 0;
   for (int i = -n; i<=n; i++) {
     boucle = 0;
     for (int j = -m; j<=m; j++) {
@@ -36,7 +36,7 @@ float ConvoGauss(double** image, int x, int y, int nl, int nc, float sigma, int 
   return res;
 }
 
-void lissage_temporel(char* imgOrigin, char* imgCible, float sigma){
+void lissage_temporel(char* imgOrigin, char* imgCible, double sigma){
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
   double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
@@ -92,7 +92,7 @@ void lissage_temporel(char* imgOrigin, char* imgCible, float sigma){
   printf(" PSNR : %f\n", pr);
 }
 
-void lissage_spatial(char* imgOrigin, char* imgCible, float sigma, int n, int m) {
+void lissage_spatial(char* imgOrigin, char* imgCible, double sigma, int n, int m) {
   /* Même début que le lissage */
   int nb,nl,nc, oldnl,oldnc;
   unsigned char **im2=NULL,** im1=NULL;
@@ -124,7 +124,7 @@ int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le no
   // Pas assez d'arguments
   if (ac < 7) {printf("Usage : %s entree sortie1 sortie2 n m sigma \n",av[0]); exit(1); }
 
-  float sigma = atof(av[6]);
+  double sigma = atof(av[6]);
   int n_masque = atoi(av[4]);
   int m_masque = atoi(av[5]);
 
