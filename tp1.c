@@ -10,8 +10,7 @@
 /**
 * Calcul de la FFT avec un filtre gaussien
 */
-double FFTGauss(int u, int v, int N, int M) {
-  double sigma = 2;
+double FFTGauss(int u, int v, int N, int M, double sigma) {
   double res ;
   double udouble = (double)u;
   double vdouble = (double)v;
@@ -28,10 +27,7 @@ double FFTGauss(int u, int v, int N, int M) {
 /**
 * Convolution d'une image avec le filtre gaussien
 */
-double ConvoGauss(double** image, int x, int y, int nl, int nc) {
-  double sigma = 2;
-  int n = 5;
-  int m = 5;
+double ConvoGauss(double** image, int x, int y, int nl, int nc, double sigma, int n, int m) {
   double boucle = 0;
   double res = 0;
   for (int i = -n; i<=n; i++) {
@@ -69,16 +65,15 @@ double ModuleGradientSobel(double** image, int x, int y, int nl, int nc) {
   return sqrt(Gx*Gx + Gy*Gy);
 }
 
-void lissage_temporel(char* imgOrigin, char* imgCible) {
+void lissage_temporel(char* imgOrigin, char* imgCible, double sigma) {
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
-  double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
+  double** im4,** im5, ** im6, ** im7, **im9,**im10;
 
 	/* Lecture d'une image pgm dont le nom est passe sur la ligne de commande */
   im1=lectureimagepgm(imgOrigin,&nl,&nc);
   if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
 
-  // Passage en réels
   double**im3=imuchar2double(im1,nl,nc);
   oldnl=nl; oldnc=nc;
 	/*  la fft demande des puissances de 2. On padde avec des 0, mais les dimensions nl et nc changent */
@@ -101,8 +96,8 @@ void lissage_temporel(char* imgOrigin, char* imgCible) {
 
   for (int i=0 ; i<nl; i++){
     for (int j=0; j<nc; j++){
-      im7[i][j] = im7[i][j]*FFTGauss(i, j, nl, nc);
-      im4[i][j] = im4[i][j]*FFTGauss(i, j, nl, nc);
+      im7[i][j] = im7[i][j]*FFTGauss(i, j, nl, nc, sigma);
+      im4[i][j] = im4[i][j]*FFTGauss(i, j, nl, nc, sigma);
     }
 
   }
@@ -120,33 +115,32 @@ void lissage_temporel(char* imgOrigin, char* imgCible) {
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
   im2 = imdouble2uchar(im9,nl,nc);
   int newnl, newnc;
-  unsigned char** im11 = lectureimagepgm("images/formes1sp.pgm",&newnl,&newnc);
-  double pr = psnr(im2, im1, newnl, newnc) ;
+  unsigned char** im11 = lectureimagepgm("images/formes1.pgm",&newnl,&newnc);
+  double pr = psnr(im2, im11, newnl, newnc) ;
   printf(" PSNR : %f\n", pr);
 }
 
-void lissage_spatial(char* imgOrigin, char* imgCible) {
+void lissage_spatial(char* imgOrigin, char* imgCible, double sigma, int n, int m) {
   /* Même début que le lissage */
   int nb,nl,nc, oldnl,oldnc;
   unsigned char **im2=NULL,** im1=NULL;
-  double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
+  double **im4;
 
   im1=lectureimagepgm(imgOrigin,&nl,&nc);
   if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
 
   double**im3=imuchar2double(im1,nl,nc);
   oldnl=nl; oldnc=nc;
-  im7=padimdforfft(im3,&nl,&nc); // Image // A-T-ON BESOIN DE CELA ALORS QU'ON NE FAIT PAS LA FFT ?
-  im8=alloue_image_double(nl,nc); // Image après convolution
+  im4=alloue_image_double(nl,nc); // Image après convolution
   /* Calcul de la convolution */
   for (int i=0; i<nl; i++) {
     for (int j=0; j<nc; j++) {
-      im8[i][j] = ConvoGauss(im7 , i, j, nl, nc);
+      im4[i][j] = ConvoGauss(im3 , i, j, nl, nc, sigma, n, m);
     }
   }
 
-  ecritureimagepgm(imgCible,crop(imdouble2uchar(im8,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
-  im2 = imdouble2uchar(im8,nl,nc);
+  ecritureimagepgm(imgCible,crop(imdouble2uchar(im4,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
+  im2 = imdouble2uchar(im4,nl,nc);
   int newnl, newnc;
   unsigned char** im11 = lectureimagepgm("images/formes1.pgm",&newnl,&newnc);
   double pr = psnr(im2, im11, newnl, newnc) ;
@@ -156,25 +150,25 @@ void lissage_spatial(char* imgOrigin, char* imgCible) {
 void detection_contours(char* imgOrigin, char* imgCible) {
   int nb,nl,nc, oldnl,oldnc;
   unsigned char **im2=NULL,** im1=NULL;
-  double** im4,** im5, ** im6, ** im7, **im8, **im9,**im10;
+  double** im4;
 
   im1=lectureimagepgm(imgOrigin,&nl,&nc);
   if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
 
   double** im3=imuchar2double(im1,nl,nc);
   oldnl=nl; oldnc=nc;
-  im8=alloue_image_double(nl, nc);
+  im4=alloue_image_double(nl, nc);
   double moy=0;
   for (int i=0; i<nl; i++) {
     for (int j=0; j<nc; j++) {
-      im8[i][j] = ModuleGradientSobel(im3, i, j, nl, nc);
-      moy += im8[i][j];
+      im4[i][j] = ModuleGradientSobel(im3, i, j, nl, nc);
+      moy += im4[i][j];
     }
   }
   moy = moy/(nl*nc);
   for (int i=0; i<nl; i++) {
     for (int j=0; j<nc; j++) {
-      if (im8[i][j] >= moy) {
+      if (im4[i][j] >= moy) {
         im3[i][j] = 0;
       } else {
         im3[i][j] = 255;
@@ -188,15 +182,18 @@ void detection_contours(char* imgOrigin, char* imgCible) {
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
   // Pas assez d'arguments
   if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
-  /*clock_t debut, fin;
+  clock_t debut, fin;
+  double sigma = 2.0;
+  int n_masque = 5;
+  int m_masque = 5;
   debut = clock();
-  lissage_temporel(av[1], av[2]);
+  lissage_temporel(av[1], av[2], sigma);
   fin = clock();
   printf("Durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
   debut = clock();
-  lissage_spatial(av[1], av[2]);
+  lissage_spatial(av[1], av[2],sigma, n_masque, m_masque);
   fin = clock();
-  printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);*/
+  printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
   detection_contours(av[1], av[2]);
   return EXIT_SUCCESS;
 }
