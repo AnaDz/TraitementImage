@@ -132,6 +132,636 @@ On voit clairemen que la deuxième méthode est beuacoup plus longue !
 
 
 Résultat SCRIPT :
+image 1 sigma 0.5 masque 1
+ PSNR : 21.520569
+durée convolution temporelle : 0.105999
+ PSNR : 20.287579
+durée convolution spatiale : 0.174640
+image 1 sigma 0.5 masque 2
+ PSNR : 21.520569
+durée convolution temporelle : 0.103903
+ PSNR : 20.285259
+durée convolution spatiale : 0.437397
+image 1 sigma 0.5 masque 3
+ PSNR : 21.520569
+durée convolution temporelle : 0.106358
+ PSNR : 20.285259
+durée convolution spatiale : 0.830102
+image 1 sigma 0.5 masque 4
+ PSNR : 21.520569
+durée convolution temporelle : 0.102399
+ PSNR : 20.285259
+durée convolution spatiale : 1.379431
+image 1 sigma 0.5 masque 5
+ PSNR : 21.520569
+durée convolution temporelle : 0.120733
+ PSNR : 20.285259
+durée convolution spatiale : 2.013072
+image 1 sigma 0.5 masque 6
+ PSNR : 21.520569
+durée convolution temporelle : 0.108627
+ PSNR : 20.285259
+durée convolution spatiale : 2.773153
+image 1 sigma 0.5 masque 10
+ PSNR : 21.520569
+durée convolution temporelle : 0.112912
+ PSNR : 20.285259
+durée convolution spatiale : 7.026207
+image 1 sigma 1 masque 1
+ PSNR : 24.495013
+durée convolution temporelle : 0.123409
+ PSNR : 20.685989
+durée convolution spatiale : 0.175791
+image 1 sigma 1 masque 2
+ PSNR : 24.495013
+durée convolution temporelle : 0.096695
+ PSNR : 24.477833
+durée convolution spatiale : 0.437808
+image 1 sigma 1 masque 3
+ PSNR : 24.495013
+durée convolution temporelle : 0.102243
+ PSNR : 24.496773
+durée convolution spatiale : 0.825530
+image 1 sigma 1 masque 4
+ PSNR : 24.495013
+durée convolution temporelle : 0.102142
+ PSNR : 24.494921
+durée convolution spatiale : 1.354439
+image 1 sigma 1 masque 5
+ PSNR : 24.495013
+durée convolution temporelle : 0.106912
+ PSNR : 24.494922
+durée convolution spatiale : 1.970498
+image 1 sigma 1 masque 6
+ PSNR : 24.495013
+durée convolution temporelle : 0.102691
+ PSNR : 24.494922
+durée convolution spatiale : 2.723004
+image 1 sigma 1 masque 10
+ PSNR : 24.495013
+durée convolution temporelle : 0.106094
+ PSNR : 24.494922
+durée convolution spatiale : 6.969406
+image 1 sigma 2 masque 1
+ PSNR : 25.063695
+durée convolution temporelle : 0.103084
+ PSNR : 12.680383
+durée convolution spatiale : 0.176958
+image 1 sigma 2 masque 2
+ PSNR : 25.063695
+durée convolution temporelle : 0.115404
+ PSNR : 17.638652
+durée convolution spatiale : 0.446470
+image 1 sigma 2 masque 3
+ PSNR : 25.063695
+durée convolution temporelle : 0.100468
+ PSNR : 22.809221
+durée convolution spatiale : 0.824504
+image 1 sigma 2 masque 4
+ PSNR : 25.063695
+durée convolution temporelle : 0.101540
+ PSNR : 24.861499
+durée convolution spatiale : 1.342751
+image 1 sigma 2 masque 5
+ PSNR : 25.063695
+durée convolution temporelle : 0.103674
+ PSNR : 25.073798
+durée convolution spatiale : 2.021459
+image 1 sigma 2 masque 6
+ PSNR : 25.063695
+durée convolution temporelle : 0.099105
+ PSNR : 25.069572
+durée convolution spatiale : 2.805573
+image 1 sigma 2 masque 10
+ PSNR : 25.063695
+durée convolution temporelle : 0.103758
+ PSNR : 25.063693
+durée convolution spatiale : 6.997511
+image 1 sigma 3 masque 1
+ PSNR : 24.368846
+durée convolution temporelle : 0.105697
+ PSNR : 10.995284
+durée convolution spatiale : 0.177760
+image 1 sigma 3 masque 2
+ PSNR : 24.368846
+durée convolution temporelle : 0.103452
+ PSNR : 13.329388
+durée convolution spatiale : 0.462002
+image 1 sigma 3 masque 3
+ PSNR : 24.368846
+durée convolution temporelle : 0.109439
+ PSNR : 16.582909
+durée convolution spatiale : 0.857199
+image 1 sigma 3 masque 4
+ PSNR : 24.368846
+durée convolution temporelle : 0.107125
+ PSNR : 20.165290
+durée convolution spatiale : 1.401127
+image 1 sigma 3 masque 5
+ PSNR : 24.368846
+durée convolution temporelle : 0.128503
+ PSNR : 22.901999
+durée convolution spatiale : 2.138232
+image 1 sigma 3 masque 6
+ PSNR : 24.368846
+durée convolution temporelle : 0.103560
+ PSNR : 24.079868
+durée convolution spatiale : 2.834702
+image 1 sigma 3 masque 10
+ PSNR : 24.368846
+durée convolution temporelle : 0.113111
+ PSNR : 24.371277
+durée convolution spatiale : 7.115314
+image 1 sigma 5 masque 1
+ PSNR : 22.822663
+durée convolution temporelle : 0.113553
+ PSNR : 10.110680
+durée convolution spatiale : 0.179058
+image 1 sigma 5 masque 2
+ PSNR : 22.822663
+durée convolution temporelle : 0.104846
+ PSNR : 10.984439
+durée convolution spatiale : 0.459602
+image 1 sigma 5 masque 3
+ PSNR : 22.822663
+durée convolution temporelle : 0.111149
+ PSNR : 12.232312
+durée convolution spatiale : 0.849335
+image 1 sigma 5 masque 4
+ PSNR : 22.822663
+durée convolution temporelle : 0.102780
+ PSNR : 13.838020
+durée convolution spatiale : 1.396250
+image 1 sigma 5 masque 5
+ PSNR : 22.822663
+durée convolution temporelle : 0.112008
+ PSNR : 15.706706
+durée convolution spatiale : 2.099823
+image 1 sigma 5 masque 6
+ PSNR : 22.822663
+durée convolution temporelle : 0.125095
+ PSNR : 17.696064
+durée convolution spatiale : 2.802069
+image 1 sigma 5 masque 10
+ PSNR : 22.822663
+durée convolution temporelle : 0.106302
+ PSNR : 22.543814
+durée convolution spatiale : 7.257523
+image 1 sigma 10 masque 1
+ PSNR : 20.105781
+durée convolution temporelle : 0.112888
+ PSNR : 9.762394
+durée convolution spatiale : 0.185727
+image 1 sigma 10 masque 2
+ PSNR : 20.105781
+durée convolution temporelle : 0.103609
+ PSNR : 9.974738
+durée convolution spatiale : 0.449686
+image 1 sigma 10 masque 3
+ PSNR : 20.105781
+durée convolution temporelle : 0.125150
+ PSNR : 10.289536
+durée convolution spatiale : 0.846313
+image 1 sigma 10 masque 4
+ PSNR : 20.105781
+durée convolution temporelle : 0.102125
+ PSNR : 10.708756
+durée convolution spatiale : 1.366580
+image 1 sigma 10 masque 5
+ PSNR : 20.105781
+durée convolution temporelle : 0.107090
+ PSNR : 11.221429
+durée convolution spatiale : 2.007045
+image 1 sigma 10 masque 6
+ PSNR : 20.105781
+durée convolution temporelle : 0.103912
+ PSNR : 11.821677
+durée convolution spatiale : 2.785353
+image 1 sigma 10 masque 10
+ PSNR : 20.105781
+durée convolution temporelle : 0.102467
+ PSNR : 14.867588
+durée convolution spatiale : 7.049305
+image 5 sigma 0.5 masque 1
+ PSNR : 15.442793
+durée convolution temporelle : 0.111759
+ PSNR : 14.113646
+durée convolution spatiale : 0.176578
+image 5 sigma 0.5 masque 2
+ PSNR : 15.442793
+durée convolution temporelle : 0.102733
+ PSNR : 14.110601
+durée convolution spatiale : 0.441616
+image 5 sigma 0.5 masque 3
+ PSNR : 15.442793
+durée convolution temporelle : 0.099846
+ PSNR : 14.110601
+durée convolution spatiale : 0.819156
+image 5 sigma 0.5 masque 4
+ PSNR : 15.442793
+durée convolution temporelle : 0.101342
+ PSNR : 14.110601
+durée convolution spatiale : 1.333950
+image 5 sigma 0.5 masque 5
+ PSNR : 15.442793
+durée convolution temporelle : 0.102868
+ PSNR : 14.110601
+durée convolution spatiale : 1.975319
+image 5 sigma 0.5 masque 6
+ PSNR : 15.442793
+durée convolution temporelle : 0.100358
+ PSNR : 14.110601
+durée convolution spatiale : 2.746892
+image 5 sigma 0.5 masque 10
+ PSNR : 15.442793
+durée convolution temporelle : 0.131955
+ PSNR : 14.110601
+durée convolution spatiale : 7.090945
+image 5 sigma 1 masque 1
+ PSNR : 18.941417
+durée convolution temporelle : 0.126345
+ PSNR : 18.484071
+durée convolution spatiale : 0.176873
+image 5 sigma 1 masque 2
+ PSNR : 18.941417
+durée convolution temporelle : 0.113059
+ PSNR : 19.050550
+durée convolution spatiale : 0.441925
+image 5 sigma 1 masque 3
+ PSNR : 18.941417
+durée convolution temporelle : 0.100830
+ PSNR : 18.944707
+durée convolution spatiale : 0.835474
+image 5 sigma 1 masque 4
+ PSNR : 18.941417
+durée convolution temporelle : 0.099575
+ PSNR : 18.940727
+durée convolution spatiale : 1.340205
+image 5 sigma 1 masque 5
+ PSNR : 18.941417
+durée convolution temporelle : 0.106097
+ PSNR : 18.940693
+durée convolution spatiale : 2.014813
+image 5 sigma 1 masque 6
+ PSNR : 18.941417
+durée convolution temporelle : 0.101349
+ PSNR : 18.940692
+durée convolution spatiale : 2.724547
+image 5 sigma 1 masque 10
+ PSNR : 18.941417
+durée convolution temporelle : 0.110452
+ PSNR : 18.940692
+durée convolution spatiale : 6.971090
+image 5 sigma 2 masque 1
+ PSNR : 20.419597
+durée convolution temporelle : 0.103934
+ PSNR : 12.752624
+durée convolution spatiale : 0.175513
+image 5 sigma 2 masque 2
+ PSNR : 20.419597
+durée convolution temporelle : 0.098510
+ PSNR : 17.441750
+durée convolution spatiale : 0.437074
+image 5 sigma 2 masque 3
+ PSNR : 20.419597
+durée convolution temporelle : 0.106560
+ PSNR : 20.603428
+durée convolution spatiale : 0.826471
+image 5 sigma 2 masque 4
+ PSNR : 20.419597
+durée convolution temporelle : 0.105335
+ PSNR : 20.759775
+durée convolution spatiale : 1.372309
+image 5 sigma 2 masque 5
+ PSNR : 20.419597
+durée convolution temporelle : 0.107186
+ PSNR : 20.522689
+durée convolution spatiale : 2.031949
+image 5 sigma 2 masque 6
+ PSNR : 20.419597
+durée convolution temporelle : 0.097557
+ PSNR : 20.440456
+durée convolution spatiale : 2.735982
+image 5 sigma 2 masque 10
+ PSNR : 20.419597
+durée convolution temporelle : 0.105366
+ PSNR : 20.419595
+durée convolution spatiale : 7.035957
+image 5 sigma 3 masque 1
+ PSNR : 20.427063
+durée convolution temporelle : 0.128661
+ PSNR : 11.039918
+durée convolution spatiale : 0.183641
+image 5 sigma 3 masque 2
+ PSNR : 20.427063
+durée convolution temporelle : 0.103930
+ PSNR : 13.437206
+durée convolution spatiale : 0.451651
+image 5 sigma 3 masque 3
+ PSNR : 20.427063
+durée convolution temporelle : 0.100945
+ PSNR : 16.621608
+durée convolution spatiale : 0.860084
+image 5 sigma 3 masque 4
+ PSNR : 20.427063
+durée convolution temporelle : 0.100558
+ PSNR : 19.526232
+durée convolution spatiale : 1.369129
+image 5 sigma 3 masque 5
+ PSNR : 20.427063
+durée convolution temporelle : 0.106643
+ PSNR : 20.806372
+durée convolution spatiale : 2.007435
+image 5 sigma 3 masque 6
+ PSNR : 20.427063
+durée convolution temporelle : 0.108525
+ PSNR : 20.846310
+durée convolution spatiale : 2.767917
+image 5 sigma 3 masque 10
+ PSNR : 20.427063
+durée convolution temporelle : 0.113126
+ PSNR : 20.436226
+durée convolution spatiale : 7.055768
+image 5 sigma 5 masque 1
+ PSNR : 19.810204
+durée convolution temporelle : 0.114249
+ PSNR : 10.137629
+durée convolution spatiale : 0.180075
+image 5 sigma 5 masque 2
+ PSNR : 19.810204
+durée convolution temporelle : 0.101830
+ PSNR : 11.031143
+durée convolution spatiale : 0.450525
+image 5 sigma 5 masque 3
+ PSNR : 19.810204
+durée convolution temporelle : 0.108533
+ PSNR : 12.330980
+durée convolution spatiale : 0.842723
+image 5 sigma 5 masque 4
+ PSNR : 19.810204
+durée convolution temporelle : 0.099983
+ PSNR : 13.977916
+durée convolution spatiale : 1.363291
+image 5 sigma 5 masque 5
+ PSNR : 19.810204
+durée convolution temporelle : 0.101282
+ PSNR : 15.842220
+durée convolution spatiale : 1.996577
+image 5 sigma 5 masque 6
+ PSNR : 19.810204
+durée convolution temporelle : 0.117609
+ PSNR : 17.682639
+durée convolution spatiale : 2.769972
+image 5 sigma 5 masque 10
+ PSNR : 19.810204
+durée convolution temporelle : 0.107191
+ PSNR : 20.264910
+durée convolution spatiale : 7.032517
+image 5 sigma 10 masque 1
+ PSNR : 18.186184
+durée convolution temporelle : 0.109904
+ PSNR : 9.764005
+durée convolution spatiale : 0.182377
+image 5 sigma 10 masque 2
+ PSNR : 18.186184
+durée convolution temporelle : 0.100178
+ PSNR : 9.984669
+durée convolution spatiale : 0.444758
+image 5 sigma 10 masque 3
+ PSNR : 18.186184
+durée convolution temporelle : 0.102250
+ PSNR : 10.317542
+durée convolution spatiale : 0.853385
+image 5 sigma 10 masque 4
+ PSNR : 18.186184
+durée convolution temporelle : 0.106074
+ PSNR : 10.755683
+durée convolution spatiale : 1.362591
+image 5 sigma 10 masque 5
+ PSNR : 18.186184
+durée convolution temporelle : 0.101330
+ PSNR : 11.292169
+durée convolution spatiale : 1.990510
+image 5 sigma 10 masque 6
+ PSNR : 18.186184
+durée convolution temporelle : 0.109911
+ PSNR : 11.919975
+durée convolution spatiale : 2.771679
+image 5 sigma 10 masque 10
+ PSNR : 18.186184
+durée convolution temporelle : 0.131425
+ PSNR : 15.056580
+durée convolution spatiale : 7.098477
+image 10 sigma 0.5 masque 1
+ PSNR : 12.690174
+durée convolution temporelle : 0.101052
+ PSNR : 11.463268
+durée convolution spatiale : 0.175015
+image 10 sigma 0.5 masque 2
+ PSNR : 12.690174
+durée convolution temporelle : 0.097055
+ PSNR : 11.462978
+durée convolution spatiale : 0.436753
+image 10 sigma 0.5 masque 3
+ PSNR : 12.690174
+durée convolution temporelle : 0.098704
+ PSNR : 11.462982
+durée convolution spatiale : 0.822358
+image 10 sigma 0.5 masque 4
+ PSNR : 12.690174
+durée convolution temporelle : 0.101463
+ PSNR : 11.462982
+durée convolution spatiale : 1.346863
+image 10 sigma 0.5 masque 5
+ PSNR : 12.690174
+durée convolution temporelle : 0.096952
+ PSNR : 11.462982
+durée convolution spatiale : 1.970715
+image 10 sigma 0.5 masque 6
+ PSNR : 12.690174
+durée convolution temporelle : 0.100919
+ PSNR : 11.462982
+durée convolution spatiale : 2.727827
+image 10 sigma 0.5 masque 10
+ PSNR : 12.690174
+durée convolution temporelle : 0.121020
+ PSNR : 11.462982
+durée convolution spatiale : 6.998372
+image 10 sigma 1 masque 1
+ PSNR : 15.683970
+durée convolution temporelle : 0.110717
+ PSNR : 16.419838
+durée convolution spatiale : 0.175527
+image 10 sigma 1 masque 2
+ PSNR : 15.683970
+durée convolution temporelle : 0.108068
+ PSNR : 15.819880
+durée convolution spatiale : 0.442485
+image 10 sigma 1 masque 3
+ PSNR : 15.683970
+durée convolution temporelle : 0.104047
+ PSNR : 15.687821
+durée convolution spatiale : 0.828795
+image 10 sigma 1 masque 4
+ PSNR : 15.683970
+durée convolution temporelle : 0.100358
+ PSNR : 15.683513
+durée convolution spatiale : 1.350521
+image 10 sigma 1 masque 5
+ PSNR : 15.683970
+durée convolution temporelle : 0.101802
+ PSNR : 15.683454
+durée convolution spatiale : 1.982414
+image 10 sigma 1 masque 6
+ PSNR : 15.683970
+durée convolution temporelle : 0.101183
+ PSNR : 15.683454
+durée convolution spatiale : 2.742157
+image 10 sigma 1 masque 10
+ PSNR : 15.683970
+durée convolution temporelle : 0.108806
+ PSNR : 15.683454
+durée convolution spatiale : 7.030061
+image 10 sigma 2 masque 1
+ PSNR : 16.958596
+durée convolution temporelle : 0.113175
+ PSNR : 12.778418
+durée convolution spatiale : 0.176293
+image 10 sigma 2 masque 2
+ PSNR : 16.958596
+durée convolution temporelle : 0.100888
+ PSNR : 16.795563
+durée convolution spatiale : 0.440076
+image 10 sigma 2 masque 3
+ PSNR : 16.958596
+durée convolution temporelle : 0.098996
+ PSNR : 17.987633
+durée convolution spatiale : 0.835177
+image 10 sigma 2 masque 4
+ PSNR : 16.958596
+durée convolution temporelle : 0.105088
+ PSNR : 17.403861
+durée convolution spatiale : 1.341249
+image 10 sigma 2 masque 5
+ PSNR : 16.958596
+durée convolution temporelle : 0.098618
+ PSNR : 17.074104
+durée convolution spatiale : 1.983578
+image 10 sigma 2 masque 6
+ PSNR : 16.958596
+durée convolution temporelle : 0.100086
+ PSNR : 16.980795
+durée convolution spatiale : 2.736299
+image 10 sigma 2 masque 10
+ PSNR : 16.958596
+durée convolution temporelle : 0.100941
+ PSNR : 16.958596
+durée convolution spatiale : 6.982293
+image 10 sigma 3 masque 1
+ PSNR : 17.090927
+durée convolution temporelle : 0.100948
+ PSNR : 11.079402
+durée convolution spatiale : 0.178480
+image 10 sigma 3 masque 2
+ PSNR : 17.090927
+durée convolution temporelle : 0.103107
+ PSNR : 13.477785
+durée convolution spatiale : 0.446050
+image 10 sigma 3 masque 3
+ PSNR : 17.090927
+durée convolution temporelle : 0.098762
+ PSNR : 16.325397
+durée convolution spatiale : 0.841260
+image 10 sigma 3 masque 4
+ PSNR : 17.090927
+durée convolution temporelle : 0.099562
+ PSNR : 18.070235
+durée convolution spatiale : 1.360561
+image 10 sigma 3 masque 5
+ PSNR : 17.090927
+durée convolution temporelle : 0.100732
+ PSNR : 18.132736
+durée convolution spatiale : 1.978677
+image 10 sigma 3 masque 6
+ PSNR : 17.090927
+durée convolution temporelle : 0.099226
+ PSNR : 17.681756
+durée convolution spatiale : 2.731788
+image 10 sigma 3 masque 10
+ PSNR : 17.090927
+durée convolution temporelle : 0.109187
+ PSNR : 17.101361
+durée convolution spatiale : 6.982164
+image 10 sigma 5 masque 1
+ PSNR : 16.851957
+durée convolution temporelle : 0.103418
+ PSNR : 10.155947
+durée convolution spatiale : 0.189434
+image 10 sigma 5 masque 2
+ PSNR : 16.851957
+durée convolution temporelle : 0.099152
+ PSNR : 11.076097
+durée convolution spatiale : 0.459187
+image 10 sigma 5 masque 3
+ PSNR : 16.851957
+durée convolution temporelle : 0.124237
+ PSNR : 12.401986
+durée convolution spatiale : 0.840113
+image 10 sigma 5 masque 4
+ PSNR : 16.851957
+durée convolution temporelle : 0.108247
+ PSNR : 14.029521
+durée convolution spatiale : 1.359490
+image 10 sigma 5 masque 5
+ PSNR : 16.851957
+durée convolution temporelle : 0.095792
+ PSNR : 15.735039
+durée convolution spatiale : 1.961472
+image 10 sigma 5 masque 6
+ PSNR : 16.851957
+durée convolution temporelle : 0.100055
+ PSNR : 17.145168
+durée convolution spatiale : 2.732322
+image 10 sigma 5 masque 10
+ PSNR : 16.851957
+durée convolution temporelle : 0.110633
+ PSNR : 17.542603
+durée convolution spatiale : 7.349439
+image 10 sigma 10 masque 1
+ PSNR : 16.005382
+durée convolution temporelle : 0.108056
+ PSNR : 9.766162
+durée convolution spatiale : 0.185922
+image 10 sigma 10 masque 2
+ PSNR : 16.005382
+durée convolution temporelle : 0.102964
+ PSNR : 9.998780
+durée convolution spatiale : 0.445285
+image 10 sigma 10 masque 3
+ PSNR : 16.005382
+durée convolution temporelle : 0.098172
+ PSNR : 10.343922
+durée convolution spatiale : 0.835816
+image 10 sigma 10 masque 4
+ PSNR : 16.005382
+durée convolution temporelle : 0.099022
+ PSNR : 10.797769
+durée convolution spatiale : 1.360752
+image 10 sigma 10 masque 5
+ PSNR : 16.005382
+durée convolution temporelle : 0.103738
+ PSNR : 11.352718
+durée convolution spatiale : 1.999616
+image 10 sigma 10 masque 6
+ PSNR : 16.005382
+durée convolution temporelle : 0.101597
+ PSNR : 11.998230
+durée convolution spatiale : 2.747433
+image 10 sigma 10 masque 10
+ PSNR : 16.005382
+durée convolution temporelle : 0.100595
+ PSNR : 15.068334
+durée convolution spatiale : 7.067917
 
 
 
