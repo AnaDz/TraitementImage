@@ -65,23 +65,34 @@ double ModuleGradientSobel(double** image, int x, int y, int nl, int nc) {
   return sqrt(Gx*Gx + Gy*Gy);
 }
 
+void ModuleLaplacien(double** imageOr, double** imageDes, int nl, int nc){
+  /*matrice et transpo identiques */
+  double M1[3][3] = {{1,2,1},{2,-4,2},{1,2,1}};
+  double Deltax, Deltay;
+  for (int i=0; i<nl; i++) {
+    for (int j=0; j<nc; j++) {
+      imageDes[i][j] = sqrt(2)*abs(ConvolutionMasque(imageOr, M1, i, j, nl, nc));
+    }
+  }
+}
+
 void lissage_temporel(char* imgOrigin, char* imgCible, double sigma) {
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
   double** im4,** im5, ** im6, ** im7, **im9,**im10;
 
-	/* Lecture d'une image pgm dont le nom est passe sur la ligne de commande */
+  /* Lecture d'une image pgm dont le nom est passe sur la ligne de commande */
   im1=lectureimagepgm(imgOrigin,&nl,&nc);
   if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
 
   double**im3=imuchar2double(im1,nl,nc);
   oldnl=nl; oldnc=nc;
-	/*  la fft demande des puissances de 2. On padde avec des 0, mais les dimensions nl et nc changent */
+  /*  la fft demande des puissances de 2. On padde avec des 0, mais les dimensions nl et nc changent */
   im7=padimdforfft(im3,&nl,&nc); // Partie réelle de l'image pour la FFT
   /*
-	On peut aussi directement utiliser
-	im7=padimucforfft(im1,&nl,&nc);
-	sans convertir im1 en image de réels
+  On peut aussi directement utiliser
+  im7=padimucforfft(im1,&nl,&nc);
+  sans convertir im1 en image de réels
   */
 
   /* Creation des images pour les parties reelles et imaginaires des fft  */
@@ -89,7 +100,7 @@ void lissage_temporel(char* imgOrigin, char* imgCible, double sigma) {
   im5=alloue_image_double(nl,nc); // Partie réelle de l'image après FFT
   im6=alloue_image_double(nl,nc); // Partie imaginaire de l'image après FFT
 
-	/* Calcul de la fft de im7,im4  */
+  /* Calcul de la fft de im7,im4  */
   fft(im7,im4,im5,im6,nl,nc);
   fftshift(im5,im6, im7,im4, nl,nc);
   // Multiplication par la FFT de la gaussienne
@@ -102,16 +113,16 @@ void lissage_temporel(char* imgOrigin, char* imgCible, double sigma) {
 
   }
   fftshift(im7,im4, im5,im6, nl,nc);
-	/* Creation des images pour les parties reelles et imagianires des fft inverses */
+  /* Creation des images pour les parties reelles et imagianires des fft inverses */
   im9=alloue_image_double(nl,nc); // Partie réelle de l'image après FFT et FFT inverse
   im10=alloue_image_double(nl,nc); // Partie imaginaire de l'image après FFT et FFT inverse
-        /* Calcul de la fft inverse de im5,im6 */
+  /* Calcul de la fft inverse de im5,im6 */
   ifft(im5,im6,im9,im10,nl,nc);
 
-	/* Conversion en entier8bits de la partie reelle de la fftinverse,
-	   Suppresion des 0 qui ont servi a completer en utilisant la fonction crop
-	   Sauvegarde au format pgm de cette image qui doit etre identique a 'linverse video
-	   car on a realise la suite fftinv(fft(image))*/
+  /* Conversion en entier8bits de la partie reelle de la fftinverse,
+  Suppresion des 0 qui ont servi a completer en utilisant la fonction crop
+  Sauvegarde au format pgm de cette image qui doit etre identique a 'linverse video
+  car on a realise la suite fftinv(fft(image))*/
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
   im2 = imdouble2uchar(im9,nl,nc);
   int newnl, newnc;
@@ -179,21 +190,78 @@ void detection_contours(char* imgOrigin, char* imgCible) {
   im2 = imdouble2uchar(im3,nl,nc);
 }
 
+void detection_contours_ordre2(char* imgOrigin, char* imgCible, double sigma){
+  unsigned char ** im1=NULL;
+  lissage_temporel(imgOrigin, imgCible, sigma);
+  int nl, nc, oldnl, oldnc;
+  double** im3, **im4, **im5, **im6, **im7;
+  /* On récupère l'image lissée */
+  im1=lectureimagepgm(imgCible,&nl,&nc);
+  if (im1==NULL)  { puts("Lecture image lissée impossible"); exit(1); }
+
+  /* convolution par le masque ! */
+  double** im2=imuchar2double(im1,nl,nc);
+  oldnl = nl;
+  oldnc = nc;
+
+
+  im3 = alloue_image_double(nl, nc);
+  /* im3 = im2*masque*/
+  ModuleLaplacien(im2, im3, nl, nc);
+  /* FFT image */
+  im4=padimdforfft(im3,&nl,&nc); // Partie réelle de l'image pour la FFT
+
+  im5=alloue_image_double(nl,nc); // Partie imaginaire de l'image pour la FFT
+  im6=alloue_image_double(nl,nc); // Partie réelle de l'image après FFT
+  im7=alloue_image_double(nl,nc); // Partie imaginaire de l'image après FFT
+
+  fft(im4, im5, im6, im7, nl, nc);
+  fftshift(im6,im7, im4,im5, nl,nc);
+  int val;
+  int R1 = 5;
+  int R2 = 10;
+  for (int i=0 ; i<nl; i++){
+    for (int j=0; j<nc; j++){
+      val = i*i+j*j;
+      if (val<R1*R1 || val>R2*R2){
+        im4[i][j]=0;
+        im5[i][j]=0;
+      }
+    }
+  }
+  fftshift(im4,im5, im6,im7, nl,nc);
+  ifft(im6, im7, im4, im5, nl, nc);
+
+  /* Détection des contours */
+  for (int i=0 ; i<nl-1; i++){
+    for (int j=0; j<nc-1; j++){
+      if(im5[i][j+1]*im5[i][j]<=0 || im5[i+1][j]*im5[i][j]<=0){
+        im5[i][j] = 255;
+      } else {
+        im5[i][j] = 0;
+      }
+    }
+  }
+
+  ecritureimagepgm(imgCible,crop(imdouble2uchar(im5,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
+
+}
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
-  // Pas assez d'arguments
-  if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
-  clock_t debut, fin;
-  double sigma = 2.0;
-  int n_masque = 5;
-  int m_masque = 5;
-  debut = clock();
-  lissage_temporel(av[1], av[2], sigma);
-  fin = clock();
-  printf("Durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
-  debut = clock();
-  lissage_spatial(av[1], av[2],sigma, n_masque, m_masque);
-  fin = clock();
-  printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
-  detection_contours(av[1], av[2]);
-  return EXIT_SUCCESS;
+// Pas assez d'arguments
+if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
+clock_t debut, fin;
+/*double sigma = 2.0;
+int n_masque = 5;
+int m_masque = 5;
+debut = clock();
+lissage_temporel(av[1], av[2], sigma);
+fin = clock();
+printf("Durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+debut = clock();
+lissage_spatial(av[1], av[2],sigma, n_masque, m_masque);
+fin = clock();
+printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+detection_contours(av[1], av[2]);*/
+detection_contours_ordre2(av[1], av[2], 2.0);
+return EXIT_SUCCESS;
 }
