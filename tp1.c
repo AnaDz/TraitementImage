@@ -41,13 +41,31 @@ double ConvoGauss(double** image, int x, int y, int nl, int nc, double sigma, in
   return res;
 }
 
+double LoG(double i, double j, double sigma){
+    double r = (i*i+j*j)/(2*sigma*sigma);
+    double res = 1/(M_PI*sigma*sigma*sigma*sigma);
+    res = res*(r-1);
+    res = res*exp(-r);
+    return res;
+}
+
+double ConvoLaplacien(double** image, int x, int y, int nl, int nc, double sigma, int n, int m) {
+  double res = 0;
+  for (int i = -n; i<=n; i++) {
+    for (int j = -m; j<=m; j++) {
+      res = res + LoG(i, j, sigma) * image[(x+i+nl)%nl][(y+j+nc)%nc];
+    }
+  }
+  return res;
+}
+
 double ConvolutionMasque(double** image, double filtre[3][3], int x, int y, int nl, int nc) {
   double resultat = 0;
   double somme;
   for(int i = -1; i <= 1; i++) {
     somme = 0;
     for (int j = -1; j <= 1; j++) {
-      somme += image[(x+i+nl)%nl][(y+j+nc)%nc]*filtre[1+i][1+j];
+      somme += image[(x+i+nl)%nl][(y+j+nc)%nc]*filtre[2+i][1+j];
     }
     resultat += somme;
   }
@@ -65,15 +83,9 @@ double ModuleGradientSobel(double** image, int x, int y, int nl, int nc) {
   return sqrt(Gx*Gx + Gy*Gy);
 }
 
-void ModuleLaplacien(double** imageOr, double** imageDes, int nl, int nc){
-  /*matrice et transpo identiques */
-  double M1[3][3] = {{1,2,1},{2,-4,2},{1,2,1}};
-  double Deltax, Deltay;
-  for (int i=0; i<nl; i++) {
-    for (int j=0; j<nc; j++) {
-      imageDes[i][j] = sqrt(2)*abs(ConvolutionMasque(imageOr, M1, i, j, nl, nc));
-    }
-  }
+double ModuleGradientLaplacien(double** image, int x, int y, int nl, int nc) {
+  double M1[3][3] = {{0,1,0},{1,-4,1},{0,1,0}};
+  return ConvolutionMasque(image, M1, x, y, nl, nc);
 }
 
 void lissage_temporel(char* imgOrigin, char* imgCible, double sigma) {
@@ -187,36 +199,85 @@ void detection_contours(char* imgOrigin, char* imgCible) {
     }
   }
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im3,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
-  im2 = imdouble2uchar(im3,nl,nc);
 }
 
 void detection_contours_ordre2(char* imgOrigin, char* imgCible, double sigma){
-  unsigned char ** im1=NULL;
-  lissage_temporel(imgOrigin, imgCible, sigma);
+
+  int nb,nl,nc, oldnl,oldnc;
+  unsigned char **im2=NULL,** im1=NULL;
+  double **im4;
+
+  im1=lectureimagepgm(imgOrigin,&nl,&nc);
+  if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
+
+  double**im3=imuchar2double(im1,nl,nc);
+  oldnl=nl; oldnc=nc;
+  im4=alloue_image_double(nl,nc); // Image après convolution
+  /* Calcul de la convolution */
+  for (int i=0; i<nl; i++) {
+    for (int j=0; j<nc; j++) {
+      im4[i][j] = ConvoLaplacien(im3 , i, j, nl, nc, sigma, 1, 1);
+    }
+  }
+
+  double **im5=alloue_image_double(nl,nc);
+  for (int i=0; i<nl; i++) {
+    for (int j=0; j<nc; j++) {
+      im5[i][j] = ModuleGradientLaplacien(im4, i, j, nl, nc);
+    }
+  }
+
+  double **im6=alloue_image_double(nl,nc);
+  /* Détection des contours */
+  for (int i=0 ; i<nl-1; i++){
+    for (int j=0; j<nc-1; j++){
+      if(im5[i][j+1]*im5[i][j]<=0 || im5[i+1][j]*im5[i][j]<=0){
+        im6[i][j] = 0;
+      } else {
+        im6[i][j] = 255;
+      }
+    }
+  }
+
+  ecritureimagepgm(imgCible,crop(imdouble2uchar(im6,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
+
+
+
+/*  unsigned char ** im1=NULL;
   int nl, nc, oldnl, oldnc;
   double** im3, **im4, **im5, **im6, **im7;
-  /* On récupère l'image lissée */
-  im1=lectureimagepgm(imgCible,&nl,&nc);
-  if (im1==NULL)  { puts("Lecture image lissée impossible"); exit(1); }
+  /* On récupère l'image d'origine */
+/*  im1=lectureimagepgm(imgOrigin,&nl,&nc);
+  if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
 
-  /* convolution par le masque ! */
+
   double** im2=imuchar2double(im1,nl,nc);
   oldnl = nl;
   oldnc = nc;
+  im3=alloue_image_double(nl,nc);
+  im4=alloue_image_double(nl,nc);
 
+  for (int i=0; i<nl; i++) {
+    for (int j=0; j<nc; j++) {
+      im4[i][j] = ConvoLaplacien(im2, i, j, nl, nc, sigma, 3, 3);
+    }
+  }*/
 
-  im3 = alloue_image_double(nl, nc);
-  /* im3 = im2*masque*/
-  ModuleLaplacien(im2, im3, nl, nc);
+  /*for (int i=0; i<nl; i++) {
+    for (int j=0; j<nc; j++) {
+      im4[i][j] = ModuleGradientLaplacien(im3, i, j, nl, nc);
+    }
+  }*/
+
   /* FFT image */
-  im4=padimdforfft(im3,&nl,&nc); // Partie réelle de l'image pour la FFT
-
+  /*im4=padimdforfft(im2,&nl,&nc); // Partie réelle de l'image pour la FFT
   im5=alloue_image_double(nl,nc); // Partie imaginaire de l'image pour la FFT
   im6=alloue_image_double(nl,nc); // Partie réelle de l'image après FFT
   im7=alloue_image_double(nl,nc); // Partie imaginaire de l'image après FFT
 
-  fft(im4, im5, im6, im7, nl, nc);
-  fftshift(im6,im7, im4,im5, nl,nc);
+  //fft(im4, im5, im6, im7, nl, nc);
+  //fftshift(im6,im7, im4,im5, nl,nc);
+
   int val;
   int R1 = 5;
   int R2 = 10;
@@ -229,23 +290,21 @@ void detection_contours_ordre2(char* imgOrigin, char* imgCible, double sigma){
       }
     }
   }
-  fftshift(im4,im5, im6,im7, nl,nc);
-  ifft(im6, im7, im4, im5, nl, nc);
+  //fftshift(im6,im7, im4,im5, nl,nc);
+  ifft(im4, im5, im6, im7, nl, nc);*/
 
   /* Détection des contours */
-  for (int i=0 ; i<nl-1; i++){
+  /*for (int i=0 ; i<nl-1; i++){
     for (int j=0; j<nc-1; j++){
-      if(im5[i][j+1]*im5[i][j]<=0 || im5[i+1][j]*im5[i][j]<=0){
-        im5[i][j] = 255;
+      if(im4[i][j+1]*im4[i][j]<=0 || im4[i+1][j]*im4[i][j]<=0){
+        im4[i][j] = 255;
       } else {
-        im5[i][j] = 0;
+        im4[i][j] = 0;
       }
     }
-  }
-
-  ecritureimagepgm(imgCible,crop(imdouble2uchar(im5,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
-
+  }*/
 }
+
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
 // Pas assez d'arguments
 if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
@@ -260,8 +319,8 @@ printf("Durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_S
 debut = clock();
 lissage_spatial(av[1], av[2],sigma, n_masque, m_masque);
 fin = clock();
-printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
-detection_contours(av[1], av[2]);*/
-detection_contours_ordre2(av[1], av[2], 2.0);
+printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);*/
+//detection_contours(av[1], av[2]);
+detection_contours_ordre2(av[1], av[2], 0.01);
 return EXIT_SUCCESS;
 }
