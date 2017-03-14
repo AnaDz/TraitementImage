@@ -11,5 +11,5 @@ int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le no
   // Pas assez d'arguments
   if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
   double pnsr = PNSR(av[1], av[2]);
-  printf("PNSR entre %s et %s : %f\n",av[1], av[2], pnsr );
+  printf("%f\n", pnsr );
 }

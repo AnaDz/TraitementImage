@@ -190,78 +190,22 @@ void detection_contours(char* imgOrigin, char* imgCible) {
   im2 = imdouble2uchar(im3,nl,nc);
 }
 
-void detection_contours_ordre2(char* imgOrigin, char* imgCible, double sigma){
-  unsigned char ** im1=NULL;
-  lissage_temporel(imgOrigin, imgCible, sigma);
-  int nl, nc, oldnl, oldnc;
-  double** im3, **im4, **im5, **im6, **im7;
-  /* On récupère l'image lissée */
-  im1=lectureimagepgm(imgCible,&nl,&nc);
-  if (im1==NULL)  { puts("Lecture image lissée impossible"); exit(1); }
-
-  /* convolution par le masque ! */
-  double** im2=imuchar2double(im1,nl,nc);
-  oldnl = nl;
-  oldnc = nc;
-
-
-  im3 = alloue_image_double(nl, nc);
-  /* im3 = im2*masque*/
-  ModuleLaplacien(im2, im3, nl, nc);
-  /* FFT image */
-  im4=padimdforfft(im3,&nl,&nc); // Partie réelle de l'image pour la FFT
-
-  im5=alloue_image_double(nl,nc); // Partie imaginaire de l'image pour la FFT
-  im6=alloue_image_double(nl,nc); // Partie réelle de l'image après FFT
-  im7=alloue_image_double(nl,nc); // Partie imaginaire de l'image après FFT
-
-  fft(im4, im5, im6, im7, nl, nc);
-  fftshift(im6,im7, im4,im5, nl,nc);
-  int val;
-  int R1 = 5;
-  int R2 = 10;
-  for (int i=0 ; i<nl; i++){
-    for (int j=0; j<nc; j++){
-      val = i*i+j*j;
-      if (val<R1*R1 || val>R2*R2){
-        im4[i][j]=0;
-        im5[i][j]=0;
-      }
-    }
-  }
-  fftshift(im4,im5, im6,im7, nl,nc);
-  ifft(im6, im7, im4, im5, nl, nc);
-
-  /* Détection des contours */
-  for (int i=0 ; i<nl-1; i++){
-    for (int j=0; j<nc-1; j++){
-      if(im5[i][j+1]*im5[i][j]<=0 || im5[i+1][j]*im5[i][j]<=0){
-        im5[i][j] = 255;
-      } else {
-        im5[i][j] = 0;
-      }
-    }
-  }
-
-  ecritureimagepgm(imgCible,crop(imdouble2uchar(im5,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
-
-}
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
-// Pas assez d'arguments
-if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
-clock_t debut, fin;
-/*double sigma = 2.0;
-int n_masque = 5;
-int m_masque = 5;
-debut = clock();
-lissage_temporel(av[1], av[2], sigma);
-fin = clock();
-printf("Durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
-debut = clock();
-lissage_spatial(av[1], av[2],sigma, n_masque, m_masque);
-fin = clock();
-printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
-detection_contours(av[1], av[2]);*/
-detection_contours_ordre2(av[1], av[2], 2.0);
-return EXIT_SUCCESS;
+  // Pas assez d'arguments
+  if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
+  clock_t debut, fin;
+  double sigma = 2.0;
+  int n_masque = 5;
+  int m_masque = 5;
+  debut = clock();
+  lissage_temporel(av[1], av[2], sigma);
+  fin = clock();
+  printf("Durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+  /*debut = clock();
+  lissage_spatial(av[1], av[2],sigma, n_masque, m_masque);
+  fin = clock();
+  printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+  detection_contours(av[1], av[2]);
+  detection_contours_ordre2(av[1], av[2], 2.0);*/
+  return EXIT_SUCCESS;
 }
