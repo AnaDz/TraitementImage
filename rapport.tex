@@ -240,5 +240,24 @@ VOIR AVEC MATTHIEU !!
 \section{Détection de contours}
 
 \subsection{Opérateur différentiel du premier ordre}
+Pour détecter les contours, nous avons utilisé le gradient de Sobel qui donne un peu plus d'importance aux pixels adjacents qu'au pixel diagonaux
 
+On peut observer en figure \ref{Contour1ordre} le résultat d'une détection de contours avec ce modèle. Le résultat semble sensible au bruit car on voit quelques contours parasites mais on voit très clairement le contour de l'image.
+
+\begin{figure} [h!]
+\caption{Image d'origine / Détection de contours}
+\label{Contour1ordre}
+\includegraphics[scale=0.5]{images/rapport/radio1.png} 
+\includegraphics[scale=0.5]{images/rapport/coucou1.png} 
+\end{figure}
+
+
+
+\subsection{Opérateur différentiel du deuxième ordre}
+\subsubsection{LoG}
+\subsubsection{FFT}
+
+
+
+LOG lent 1er ordre rapide
 \end{document}
