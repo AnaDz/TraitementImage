@@ -767,3 +767,168 @@ durée convolution spatiale : 7.067917
 
 
 TODO : Trouver la loi de proportionalité entre sigma et la taille du masque
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+image 1 sigma 0.5 masque 6
+ PSNR : 21.520569
+durée convolution temporelle : 0.108054
+ PSNR : 20.285259
+durée convolution spatiale : 2.719405
+image 1 sigma 1 masque 6
+ PSNR : 24.495013
+durée convolution temporelle : 0.102018
+ PSNR : 24.494922
+durée convolution spatiale : 2.723880
+image 1 sigma 2 masque 6
+ PSNR : 25.063695
+durée convolution temporelle : 0.140707
+ PSNR : 25.069572
+durée convolution spatiale : 2.789134
+image 1 sigma 2.5 masque 6
+ PSNR : 24.756379
+durée convolution temporelle : 0.104521
+ PSNR : 24.753201
+durée convolution spatiale : 2.761084
+image 1 sigma 3 masque 6
+ PSNR : 24.368846
+durée convolution temporelle : 0.115381
+ PSNR : 24.079868
+durée convolution spatiale : 2.870462
+image 1 sigma 5 masque 6
+ PSNR : 22.822663
+durée convolution temporelle : 0.101365
+ PSNR : 17.696064
+durée convolution spatiale : 2.881080
+image 1 sigma 10 masque 6
+ PSNR : 20.105781
+durée convolution temporelle : 0.144243
+ PSNR : 11.821677
+durée convolution spatiale : 2.805952
+image 1 sigma 15 masque 6
+ PSNR : 18.304289
+durée convolution temporelle : 0.117249
+ PSNR : 10.617887
+durée convolution spatiale : 2.813396
+image 1 sigma 20 masque 6
+ PSNR : 17.029367
+durée convolution temporelle : 0.113601
+ PSNR : 10.196078
+durée convolution spatiale : 2.800723
+image 5 sigma 0.5 masque 6
+ PSNR : 15.442793
+durée convolution temporelle : 0.104842
+ PSNR : 14.110601
+durée convolution spatiale : 2.793335
+image 5 sigma 1 masque 6
+ PSNR : 18.941417
+durée convolution temporelle : 0.104405
+ PSNR : 18.940692
+durée convolution spatiale : 2.798739
+image 5 sigma 2 masque 6
+ PSNR : 20.419597
+durée convolution temporelle : 0.110142
+ PSNR : 20.440456
+durée convolution spatiale : 2.804403
+image 5 sigma 2.5 masque 6
+ PSNR : 20.486414
+durée convolution temporelle : 0.139421
+ PSNR : 20.653539
+durée convolution spatiale : 2.832998
+image 5 sigma 3 masque 6
+ PSNR : 20.427063
+durée convolution temporelle : 0.099008
+ PSNR : 20.846310
+durée convolution spatiale : 2.907856
+image 5 sigma 5 masque 6
+ PSNR : 19.810204
+durée convolution temporelle : 0.121967
+ PSNR : 17.682639
+durée convolution spatiale : 2.821042
+image 5 sigma 10 masque 6
+ PSNR : 18.186184
+durée convolution temporelle : 0.127230
+ PSNR : 11.919975
+durée convolution spatiale : 2.837825
+image 5 sigma 15 masque 6
+ PSNR : 16.950531
+durée convolution temporelle : 0.106574
+ PSNR : 10.661956
+durée convolution spatiale : 2.843467
+image 5 sigma 20 masque 6
+ PSNR : 16.037217
+durée convolution temporelle : 0.102598
+ PSNR : 10.214430
+durée convolution spatiale : 2.883513
+image 10 sigma 0.5 masque 6
+ PSNR : 12.690174
+durée convolution temporelle : 0.120805
+ PSNR : 11.462982
+durée convolution spatiale : 2.766617
+image 10 sigma 1 masque 6
+ PSNR : 15.683970
+durée convolution temporelle : 0.134925
+ PSNR : 15.683454
+durée convolution spatiale : 2.804246
+image 10 sigma 2 masque 6
+ PSNR : 16.958596
+durée convolution temporelle : 0.126430
+ PSNR : 16.980795
+durée convolution spatiale : 2.812437
+image 10 sigma 2.5 masque 6
+ PSNR : 17.073822
+durée convolution temporelle : 0.126650
+ PSNR : 17.266326
+durée convolution spatiale : 2.870671
+image 10 sigma 3 masque 6
+ PSNR : 17.090927
+durée convolution temporelle : 0.123384
+ PSNR : 17.681756
+durée convolution spatiale : 2.762511
+image 10 sigma 5 masque 6
+ PSNR : 16.851957
+durée convolution temporelle : 0.106578
+ PSNR : 17.145168
+durée convolution spatiale : 2.833539
+image 10 sigma 10 masque 6
+ PSNR : 16.005382
+durée convolution temporelle : 0.103478
+ PSNR : 11.998230
+durée convolution spatiale : 2.728221
+image 10 sigma 15 masque 6
+ PSNR : 15.278750
+durée convolution temporelle : 0.110574
+ PSNR : 10.703735
+durée convolution spatiale : 2.726297
+image 10 sigma 20 masque 6
+ PSNR : 14.706369
+durée convolution temporelle : 0.109558
+ PSNR : 10.238928
+durée convolution spatiale : 2.718305
