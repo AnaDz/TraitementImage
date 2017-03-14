@@ -1,5 +1,5 @@
 *.o
-images/
+*.pgm
 *#
 bin/
 *~
