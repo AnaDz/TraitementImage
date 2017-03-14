@@ -146,10 +146,12 @@ void lissage_temporel(char* imgOrigin, char* imgCible, double sigma) {
   car on a realise la suite fftinv(fft(image))*/
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im9,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
   im2 = imdouble2uchar(im9,nl,nc);
+  /* ______________ Utile uniquement pour les images de formes1 __________________*/
+  /*
   int newnl, newnc;
   unsigned char** im11 = lectureimagepgm("images/formes1.pgm",&newnl,&newnc);
   double pr = psnr(im2, im11, newnl, newnc) ;
-  printf(" PSNR : %f\n", pr);
+  printf(" PSNR : %f\n", pr);*/
 }
 
 void lissage_spatial(char* imgOrigin, char* imgCible, double sigma, int n, int m) {
@@ -173,10 +175,12 @@ void lissage_spatial(char* imgOrigin, char* imgCible, double sigma, int n, int m
 
   ecritureimagepgm(imgCible,crop(imdouble2uchar(im4,nl,nc),0,0,oldnl,oldnc),oldnl,oldnc);
   im2 = imdouble2uchar(im4,nl,nc);
-  int newnl, newnc;
-  unsigned char** im11 = lectureimagepgm("images/formes1.pgm",&newnl,&newnc);
+/* ______________ Utile uniquement pour les images de formes1 __________________*/
+  //int newnl, newnc;
+
+  /*unsigned char** im11 = lectureimagepgm("images/formes1.pgm",&newnl,&newnc);
   double pr = psnr(im2, im11, newnl, newnc) ;
-  printf(" PSNR : %f\n", pr);
+  printf(" PSNR : %f\n", pr);*/
 }
 
 void detection_contours(char* imgOrigin, char* imgCible) {
@@ -293,25 +297,56 @@ int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le no
 // Pas assez d'arguments
 if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
 clock_t debut, fin;
-double sigma = 3.0;
+double sigma = 2.0;
 int n_masque = 5;
 int m_masque = 5;
 
-/*debut = clock();*/
 
-//lissage_temporel(av[1], av[2], sigma);
-
-/*fin = clock();
-printf("Durée convolution temporelle : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
-debut = clock();*/
-
-//lissage_spatial(av[1], av[2],sigma, n_masque, m_masque);
-
-/*fin = clock();
-printf("Durée convolution spatiale : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);*/
-
-//detection_contours(av[1], av[2]);
-//detection_contours_ordre2_LoG(av[1], av[2], 3);
-detection_contours_ordre2_FFT(av[1], av[2], 3);
+int choix = 0;
+printf("Menu :\n");
+printf("1 : Lissage fréquentiel\n");
+printf("2 : Lissage spatial \n");
+printf("3 : Détection de contours d'ordre 1\n");
+printf("4 : Détection de contours d'ordre 2\n");
+printf("5 : Sortir \n");
+printf("Quel est votre choix ? ");
+scanf("%d", &choix);
+debut = clock();
+switch (choix) {
+  case 1 :
+    printf("Entrez un double pour la valeur de sigma : ");
+    scanf("%lf", &sigma);
+    lissage_temporel(av[1], av[2], sigma);
+    fin = clock();
+    printf("Durée lissage fréquentiel : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+    break;
+  case 2:
+    printf("Entrez un double pour la valeur de sigma : ");
+    scanf("%lf", &sigma);
+    printf("Entrez un entier pour la longueur de masque : ");
+    scanf("%d", &n_masque);
+    printf("Entrez un entier pour la largeur de masque : ");
+    scanf("%d", &m_masque);
+    lissage_spatial(av[1], av[2],sigma, n_masque, m_masque);
+    fin = clock();
+    printf("Durée lissage spatial : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+    break;
+  case 3:
+    detection_contours(av[1], av[2]);
+    fin = clock();
+    printf("Durée détection du contour d'ordre 1 : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+    break;
+  case 4:
+    detection_contours_ordre2_LoG(av[1], av[2], 3);
+    fin = clock();
+    printf("Durée détection du contour d'ordre 2 : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+    break;
+  case 5:
+    break;
+  default:
+    printf("Vous avez entré un mauvais chiffre, au revoir ! :) \n" );
+    break;
+}
+printf("Au revoir !\n");
 return EXIT_SUCCESS;
 }
