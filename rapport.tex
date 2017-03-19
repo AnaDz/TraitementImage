@@ -231,11 +231,31 @@ $W(\sigma) = A*\sigma+B$
 
 Ainsi, pour un $\sigma$ donné il faut un masque de taille $\sim 5*\sigma$. Cependant, qualitativement, on ne voit plus de différence à partir d'un masque de taille $\sim 3*\sigma$. 
 
-
+Les résultats de lissage sur les images de différents bruit donc totalement similaires à celles obtenues pour le lissage fréquentiel en figure \ref{SP2}, \ref{PETS2} et \ref{BB2}.
 \subsection{Complexité est comparaison des deux méthodes}
-Pour mesurer le temps de calcul en fonction de $\sigma$ nous avons pris un masque égale à $6x6$ car celui-ci obtient de bons résultats (qualitativement parlant) pour de nombreux $\sigma$
+Pour mesurer le temps de calcul en fonction de $\sigma$ nous avons pris un masque égale à $6x6$ car celui-ci obtient de bons résultats (qualitativement parlant) pour de nombreux $\sigma$. Dans ce cas nous obtenons le résultat en figure \ref{tempscalculsigma}.
 
-VOIR AVEC MATTHIEU !!
+On observe que le temps de calcul varie très peu en fonction de $\sigma$. On peut donc considérer que $\sigma$ n'a pas d'impact sur le temps de calcul. On observe par ailleurs que l'écart entre le temps de calcul de l'image lissée par le lissage fréquentiel et spatial est très significatif. Le lissage spatial est nettement plus long que le lissage temporel.
+
+
+\begin{figure}
+\caption{Temps de calcul en fonction de $\sigma$ pour un masque de taille 6$\times$6}
+\label{tempscalculsigma}
+\includegraphics[scale=1]{images/rapport/courbes/temps_calcul_sigma.png} 
+\end{figure}
+
+Afin de vérifier si cette hypothèse est valable pour n'importe quelle taille de masque, nous avons tracé pour $\sigma=2.0$ le temps de calcul en fonction de la taille du masque (en $n \times n$) en figure \ref{tempscalculmasque}. Bien sûr, le lissage fréquentiel ne dépend pas de la taille du masque, donc il est constant. Ce qui est plus intéressant est de voir l'écart entre le temps de calcul du lissage fréquentiel et spatial qui est de plus en plus grand suivant la taille du masque. 
+
+En exploitant les résultats, on pourrait dire qu'à partir d'une masque de taille $0.6\times0.6$ il est plus rapide de faire le lissage fréquentiel que spatial. Cependant prendre un masque de taille $<1$ n'a pas vraiment de sens vu qu'on prend des pixels. Ainsi, le lissage fréquentiel est toujours plus rapide que le lissage spatial et, pour des masque de petite taille ($\sim <2$), l'écart de temps de calcul n'est pas très grand mais les résultats ne sont pas aussi bons en lissage spatial qu'en lissage fréquentiel.
+
+
+En conclusion, nous avons deux méthodes de lissages qui ont le même effet sur les images et réagissent très bien à un bruit Gaussien et légèrement moins bien sur un bruit Poivre et Sel ou Speckle. Le lissage spatial est nettement plus long que le lissage fréquentiel mais permet une meilleure liberté sur le résultat souhaité avec les deux paramètres définissant la taille du masque. 
+
+\begin{figure}
+\caption{Temps de calcul en fonction de la taille du masque $n \times n$ pour $\sigma=2.0$}
+\label{tempscalculmasque}
+\includegraphics[scale=1]{images/rapport/courbes/temps_calcul_masque.png} 
+\end{figure}
 
 \section{Détection de contours}
 
