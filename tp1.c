@@ -97,7 +97,7 @@ double ModuleGradientSobel(double** image, int x, int y, int nl, int nc) {
   return sqrt(Gx*Gx + Gy*Gy);
 }
 
-void lissage_temporel(char* imgOrigin, char* imgCible, double sigma) {
+void lissage_frequentiel(char* imgOrigin, char* imgCible, double sigma) {
   int nb,nl,nc, oldnl,oldnc; // Nombre lignes, nombre colonnes, ancien nombre lignes, ancien nombre colonnes
   unsigned char **im2=NULL,** im1=NULL;
   double** im4,** im5, ** im6, ** im7, **im9,**im10;
@@ -251,8 +251,8 @@ void detection_contours_ordre2_FFT(char* imgOrigin, char* imgCible, double sigma
 
   int nb,nl,nc, oldnl,oldnc;
   unsigned char **im2=NULL,** im1=NULL;
-
-  im1=lectureimagepgm(imgOrigin,&nl,&nc);
+  lissage_frequentiel(imgOrigin, imgCible,sigma);
+  im1=lectureimagepgm(imgCible,&nl,&nc);
   if (im1==NULL)  { puts("Lecture image impossible"); exit(1); }
 
   double**im3=imuchar2double(im1,nl,nc);
@@ -301,7 +301,7 @@ double sigma = 2.0;
 int n_masque = 5;
 int m_masque = 5;
 
-
+int choix2 = 0;
 int choix = 0;
 printf("Menu :\n");
 printf("1 : Lissage fréquentiel\n");
@@ -311,12 +311,12 @@ printf("4 : Détection de contours d'ordre 2\n");
 printf("5 : Sortir \n");
 printf("Quel est votre choix ? ");
 scanf("%d", &choix);
-debut = clock();
 switch (choix) {
   case 1 :
     printf("Entrez un double pour la valeur de sigma : ");
     scanf("%lf", &sigma);
-    lissage_temporel(av[1], av[2], sigma);
+    debut = clock();
+    lissage_frequentiel(av[1], av[2], sigma);
     fin = clock();
     printf("Durée lissage fréquentiel : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
@@ -327,19 +327,46 @@ switch (choix) {
     scanf("%d", &n_masque);
     printf("Entrez un entier pour la largeur de masque : ");
     scanf("%d", &m_masque);
+    debut = clock();
     lissage_spatial(av[1], av[2],sigma, n_masque, m_masque);
     fin = clock();
     printf("Durée lissage spatial : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 3:
+    debut = clock();
     detection_contours(av[1], av[2]);
     fin = clock();
     printf("Durée détection du contour d'ordre 1 : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 4:
-    detection_contours_ordre2_LoG(av[1], av[2], 3);
-    fin = clock();
-    printf("Durée détection du contour d'ordre 2 : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+    printf("Quel type de détection de contour :\n");
+    printf("1 : Méthode LoG\n");
+    printf("2 : Méthode FFT \n");
+    printf("3 : Sortir \n");
+    printf("Quel est votre choix ? ");
+    scanf("%d", &choix2);
+
+
+    switch (choix2) {
+      case 1:
+        printf("Entrez un double pour la valeur de sigma : ");
+        scanf("%lf", &sigma);
+        debut = clock();
+        detection_contours_ordre2_LoG(av[1], av[2], sigma);
+        fin = clock();
+        printf("Durée détection du contour d'ordre 2 méthode LoG : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+        break;
+      case 2:
+        printf("Entrez un double pour la valeur de sigma : ");
+        scanf("%lf", &sigma);
+        debut = clock();
+        detection_contours_ordre2_FFT(av[1], av[2], sigma);
+        fin = clock();
+        printf("Durée détection du contour d'ordre 2 méthode FFT : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+        break;
+      case 3:
+        break;
+    }
     break;
   case 5:
     break;
