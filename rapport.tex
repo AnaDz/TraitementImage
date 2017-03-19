@@ -239,6 +239,7 @@ On observe que le temps de calcul varie très peu en fonction de $\sigma$. On pe
 
 
 \begin{figure}
+\centering
 \caption{Temps de calcul en fonction de $\sigma$ pour un masque de taille 6$\times$6}
 \label{tempscalculsigma}
 \includegraphics[scale=1]{images/rapport/courbes/temps_calcul_sigma.png} 
@@ -252,6 +253,7 @@ En exploitant les résultats, on pourrait dire qu'à partir d'une masque de tail
 En conclusion, nous avons deux méthodes de lissages qui ont le même effet sur les images et réagissent très bien à un bruit Gaussien et légèrement moins bien sur un bruit Poivre et Sel ou Speckle. Le lissage spatial est nettement plus long que le lissage fréquentiel mais permet une meilleure liberté sur le résultat souhaité avec les deux paramètres définissant la taille du masque. 
 
 \begin{figure}
+\centering
 \caption{Temps de calcul en fonction de la taille du masque $n \times n$ pour $\sigma=2.0$}
 \label{tempscalculmasque}
 \includegraphics[scale=1]{images/rapport/courbes/temps_calcul_masque.png} 
@@ -260,24 +262,86 @@ En conclusion, nous avons deux méthodes de lissages qui ont le même effet sur 
 \section{Détection de contours}
 
 \subsection{Opérateur différentiel du premier ordre}
-Pour détecter les contours, nous avons utilisé le gradient de Sobel qui donne un peu plus d'importance aux pixels adjacents qu'au pixel diagonaux
+Pour détecter les contours, nous avons utilisé le gradient de Sobel qui donne un peu plus d'importance aux pixels adjacents qu'au pixel diagonaux.
 
 On peut observer en figure \ref{Contour1ordre} le résultat d'une détection de contours avec ce modèle. Le résultat semble sensible au bruit car on voit quelques contours parasites mais on voit très clairement le contour de l'image.
 
 \begin{figure} [h!]
+\centering
 \caption{Image d'origine / Détection de contours}
 \label{Contour1ordre}
 \includegraphics[scale=0.5]{images/rapport/radio1.png} 
 \includegraphics[scale=0.5]{images/rapport/coucou1.png} 
 \end{figure}
 
-
+\newpage
 
 \subsection{Opérateur différentiel du deuxième ordre}
+Pour la détection de contours d'ordre 2, nous avons implémenté deux méthodes : le Laplacian of Gaussian(LoG) et la FFT. Pour chacune de ces méthodes il est possible de choisir une valeur de $\sigma$ pour le lissage effectué juste avant la détection. Nous vous conseillons de prendre $\sigma \approx 3.0$ pour avoir un bon lissage sans trop réduire la forme et donc rendre les contours trop approximatifs.
+
 \subsubsection{LoG}
+Cette méthode fait l'objet d'une convolution avec un masque qui lisse l'image et calcul le Laplacien. Les contours sont repérés par un passage à zero du Laplacien entre deux pixels.
+
+En figure \ref{Logavap} on peut voir le résultat pour $\sigma=3.0$
+
+\begin{figure}
+\centering
+\caption{Détection de contour LoG}
+\label{Logavap}
+\includegraphics[scale=0.5]{images/rapport/radio1.png} 
+\includegraphics[scale=0.5]{images/rapport/coucou2.png}
+\end{figure}
+
 \subsubsection{FFT}
+Cette méthode fait l'objet d'un lissage suivit d'un traitement par FFT. 
+Les contours sont repérés par un passage à zero entre deux pixels
 
+En figure \ref{FFavap} on peut voir le résultat pour $\sigma=3.0$
 
+\begin{figure}
+\centering
+\caption{Détection de contour FFT}
+	\label{FFavap}
+	\includegraphics[scale=0.5]{images/rapport/radio1.png} 
+	\includegraphics[scale=0.5]{images/rapport/coucou3.png}
+\end{figure}
+On remarque que le bruit est bien plus marqué. Le résultat n'est pas très satisfaisant. Nous ne savons pas si cela provient de la méthode ou de notre implémentation. 
 
-LOG lent 1er ordre rapide
+\subsection{Comparaison des 3 méthodes}
+D'emblée, la méthode du deuxième ordre n'est pas satisfaisante car trop sensible au bruit.
+
+Pour ce qui est de la méthode LoG du deuxième ordre ou de la méthode du premier ordre, tout dépend de ce que l'on souhaite obtenir. L'ordre 1 permet d'obtenir des contours marqués et assez imprécis tandis que l'ordre 2 fourni des contours fin et précis. Nous allons donc comparer les différentes méthodes.
+\subsubsection{Complexité}
+L'ordre 1 s'exécute en quelques dixièmes de seconde tandis que l'ordre 2 est plutôt de l'ordre de la dizaine de secondes ! L'ordre 2 est donc bien plus long.
+
+\subsubsection{Sensibilité au bruit}
+En figure \ref{bruitcom} , on peut voir l'effet de chacune des méthodes de détection de contour sur une image bruitée avec un bruit gaussien.
+
+Le bruit est empiré avec le traitement d'ordre 1 tandis que le traitement d'ordre 2 laisse passer beaucoup moins de bruit (grâce au lissage). Il faut tout de même faire attention à trouver la bonne valeur de $\sigma$ pour le lissage si on ne veut pas perdre de trop d'information ou au contraire, garder trop de bruit.
+\begin{figure}
+\centering
+\caption{Image d'origine - contour ordre 1 - contour ordre 2}
+\label{bruitcom}
+\includegraphics[scale=0.5]{images/rapport/formes2bb25.png} 
+\includegraphics[scale=0.5]{images/rapport/coucoubruit.png}
+\includegraphics[scale=0.5]{images/rapport/coucoubruit2.png} 
+\end{figure}
+ 
+\subsubsection{Image sans bruit}
+En figure \ref{comparaisonnormale}, on voit la détection de contour pour l'ordre 1 et l'ordre 2. 
+
+L'avantage de l'ordre 1 est que le contour de chaque cellule est complet (alors que dans le cas d'ordre 2 certaines cellules ne forment pas un cercle parfait). Cependant l'ordre 2 permet de détecter plus facilement et de manière plus sûre le nombre de cellules car on distingue correctement les deux cellules lorsque celles-ci sont superposées.
+
+\begin{figure}
+\centering
+\caption{Image d'origine - contour ordre 1 - contour ordre 2}
+\label{comparaisonnormale}
+\includegraphics[scale=1.25]{images/rapport/blood.jpg} 
+\includegraphics[scale=0.3]{images/rapport/blood1.jpg} 
+\includegraphics[scale=0.3]{images/rapport/blood2.jpg} 
+\end{figure}
+
+\subsubsection{Conclusion}
+En conclusion, les deux méthodes de détections de contours sont bonnes, tout dépend de ce que l'on souhaite faire. Si on veut un traitement massif de données, il vaut mieux utiliser l'ordre 1 qui est nettement plus rapide. Si on veut détecter le contour d'une image bruitée, l'ordre 2 est plus intéressant car il contient un lissage. Et si on veut étudier les contours de manière détaillés, la détection de contours d'ordre 2 est plus adaptée car le contour est plus fin et plus précis.
+
 \end{document}
