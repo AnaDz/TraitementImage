@@ -1,6 +1,7 @@
 *.o
 *.pgm
 *#
-bin/
+tp1/bin/
+tp2/bin
 *~
 *.pdf
