@@ -56,7 +56,7 @@ void filtre_adaptatif_recursif(char* imgOrigin, char* imgCible,
 
 int main (int ac, char **av) {
   if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
-  int iteration = 200;
+  int iteration = 20;
   double k = 3;
   filtre_adaptatif_recursif(av[1], av[2], iteration, k);
   return EXIT_SUCCESS;
