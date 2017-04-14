@@ -157,6 +157,7 @@ int median_filter(char* imgOrigin, char*imCible, int n){
 }
 
 double EstimationBruit(char* imgOrigin, int t, double p){
+  /* TODO : prendre les bords en compte ! */
   int nL, nC;
   unsigned char **imO = NULL;
   imO = lectureimagepgm(imgOrigin, &nL, &nC);
@@ -204,7 +205,7 @@ double EstimationBruit(char* imgOrigin, int t, double p){
     }
   }
   int cumul = histograme[0];
-  int taux = (int) (p*nL*nC/100);
+  int taux = (int) (p*(nL-2*t)*(nC-2*t)/100);
   int res = 1;
   while (cumul<taux && res<256*256) {
     cumul += histograme[res];
