@@ -17,6 +17,73 @@ void copy_image(double **origine, double **cible, int nl, int nc) {
   }
 }
 
+int filtre_median(char* imgOrigin, char*imCible, int n) {
+  int nL, nC;
+  unsigned char **imO = NULL, **imC = NULL;
+
+  imO = lectureimagepgm(imgOrigin, &nL, &nC);
+  if(imO == NULL){
+    puts("Lecture image impossible");
+  }
+
+  double** im1 = imuchar2double(imO, nL, nC); // Image bruitée
+  double** im2 = alloue_image_double(nL, nC);  // Image débrutée
+
+  int histograme[256];
+  int cumul = 0;
+  int ind = 0;
+
+  /* Recopie la bordure */
+  for (int i=0;i<n; i++){
+    for (int j=0; j<nC; j++){
+      im2[i][j] = im1[i][j];
+      im2[nL-1-i][j] = im1[nL-1-i][j];
+    }
+  }
+  for (int i=0;i<n; i++){
+    for (int j=0; j<nL; j++){
+      im2[j][i] = im1[j][i];
+      im2[j][nC-1-i] = im1[j][nC-1-i];
+    }
+  }
+  for(int i=n; i<(nL-n); i++){
+    // Premier point : n
+    for(int a=0; a<256; a++){
+      histograme[a] = 0;
+    }
+    for(int j=i-n; j<i+n+1 ; j++ ){
+      for(int k=0; k<2*n+1; k++){
+        histograme[(int) im1[j][k]]++;
+      }
+    }
+    cumul = 0;
+    ind = 0;
+    while(cumul<(2*n*n + 2*n) && ind<256){
+      cumul += histograme[ind];
+      ind++;
+    }
+    im2[i][n] = ind-1;
+    // Les autres points de la ligne
+    for(int j=n+1; j<nC-n; j++){
+      // On retire la premiere colonne de l'ancien masque
+      for(int k=i-n; k< i+n+1; k++){
+        histograme[(int) im1[k][j-(n+1)]]--;
+        histograme[(int) im1[k][j+n]]++;
+      }
+      // Recalcul de cumul
+      cumul = 0;
+      ind = 0;
+      while(cumul<(2*n*n + 2*n) && ind<254){
+        cumul += histograme[ind];
+        ind++;
+      }
+      im2[i][j] = ind-1;
+    }
+  }
+
+  ecritureimagepgm(imCible,imdouble2uchar(im2,nL,nC),nL,nC);
+}
+
 void filtre_adaptatif_recursif(char* imgOrigin, char* imgCible,
                               int iteration, double k) {
   /* Initialisation de la fonction... */
@@ -112,12 +179,13 @@ void filtre_nlmeans(char* imgOrigin, char* imgCible,
       for (int x = -t+X; x <= t+X; x++) { // Cordonnée x du pixel q
         for (int y = -t+Y; y <= t+Y; y++) { // Coordonnée y du pixel q
           double d2 = 0;
-          for (int i = -r; i <= r; i++) { // Faire i = -r+x et i <= r+x pour rigoler un bon coup
-            for (int j = -r; j <= r; j++) { // idem pour j
+          for (int i = -r; i <= r; i++) {
+            for (int j = -r; j <= r; j++) {
               double difference = im2[(x+i+nl)%nl][(y+j+nc)%nc]-im2[(X+i+nl)%nl][(Y+j+nc)%nc];
               d2 += difference*difference;
             }
           }
+          d2 *= 1.0/(2*r+1)/(2*r+1);
           double w = exp(-d2/(2*sigma*sigma));
           numerateur += w*im2[x][y];
           denominateur += w;
@@ -132,13 +200,15 @@ void filtre_nlmeans(char* imgOrigin, char* imgCible,
 
 int main (int ac, char **av) {
   if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
+  int n = 3;
   int iteration = 20;
-  double k = 3;
+  double k = 10;
   double sigma1 = 2;
   double sigma2 = 50;
-  double t = 2;
+  double t = 7;
   double r = 2;
-  double sigma = 100;
+  double sigma = 40;
+  //filtre_median(av[1], av[2], n);
   //filtre_adaptatif_recursif(av[1], av[2], iteration, k);
   //filtre_bilateral(av[1], av[2], sigma1, sigma2);
   filtre_nlmeans(av[1], av[2], t, r, sigma);
