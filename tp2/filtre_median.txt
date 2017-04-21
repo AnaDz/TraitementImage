@@ -1,0 +1,236 @@
+taille  3
+image  formes2bb30
+Durée du filtre médian : 0.058528
+Au revoir !
+image  formes2pets1
+Durée du filtre médian : 0.053410
+Au revoir !
+image  formes2bb40b
+Durée du filtre médian : 0.052312
+Au revoir !
+image  formes2pets5
+Durée du filtre médian : 0.057559
+Au revoir !
+image  formes2bb40
+Durée du filtre médian : 0.072282
+Au revoir !
+image  formes2bb10b
+Durée du filtre médian : 0.054231
+Au revoir !
+image  formes2bb50b
+Durée du filtre médian : 0.052370
+Au revoir !
+image  formes2sp1
+image  formes2bb10
+Durée du filtre médian : 0.067393
+Au revoir !
+image  formes2bb50
+Durée du filtre médian : 0.070855
+Au revoir !
+image  formes2sp2
+Durée du filtre médian : 0.071362
+Au revoir !
+image  formes2bb15b
+Durée du filtre médian : 0.053540
+Au revoir !
+image  formes2bb67b
+Durée du filtre médian : 0.053605
+Au revoir !
+image  formes2sp5
+Durée du filtre médian : 0.051631
+Au revoir !
+image  formes2bb15
+Durée du filtre médian : 0.052440
+Au revoir !
+image  formes2bb67
+Durée du filtre médian : 0.061653
+Au revoir !
+image  formes2bb25b
+Durée du filtre médian : 0.052405
+Au revoir !
+image  formes2bb90b
+Durée du filtre médian : 0.053059
+Au revoir !
+image  formes2bb30b
+Durée du filtre médian : 0.052589
+Au revoir !
+image  formes2bb90
+Durée du filtre médian : 0.051780
+Au revoir !
+taille  5
+image  formes2bb30
+Durée du filtre médian : 0.055306
+Au revoir !
+image  formes2pets1
+Durée du filtre médian : 0.056737
+Au revoir !
+image  formes2bb40b
+Durée du filtre médian : 0.055359
+Au revoir !
+image  formes2pets5
+Durée du filtre médian : 0.073235
+Au revoir !
+image  formes2bb40
+Durée du filtre médian : 0.073001
+Au revoir !
+image  formes2bb10b
+Durée du filtre médian : 0.054919
+Au revoir !
+image  formes2bb50b
+Durée du filtre médian : 0.055280
+Au revoir !
+image  formes2sp1
+image  formes2bb10
+Durée du filtre médian : 0.056527
+Au revoir !
+image  formes2bb50
+Durée du filtre médian : 0.055894
+Au revoir !
+image  formes2sp2
+Durée du filtre médian : 0.055216
+Au revoir !
+image  formes2bb15b
+Durée du filtre médian : 0.073729
+Au revoir !
+image  formes2bb67b
+Durée du filtre médian : 0.076626
+Au revoir !
+image  formes2sp5
+Durée du filtre médian : 0.074262
+Au revoir !
+image  formes2bb15
+Durée du filtre médian : 0.055361
+Au revoir !
+image  formes2bb67
+Durée du filtre médian : 0.075067
+Au revoir !
+image  formes2bb25b
+Durée du filtre médian : 0.074906
+Au revoir !
+image  formes2bb90b
+Durée du filtre médian : 0.074250
+Au revoir !
+image  formes2bb30b
+Durée du filtre médian : 0.054900
+Au revoir !
+image  formes2bb90
+Durée du filtre médian : 0.055106
+Au revoir !
+taille  10
+image  formes2bb30
+Durée du filtre médian : 0.061969
+Au revoir !
+image  formes2pets1
+Durée du filtre médian : 0.068826
+Au revoir !
+image  formes2bb40b
+Durée du filtre médian : 0.081658
+Au revoir !
+image  formes2pets5
+Durée du filtre médian : 0.082411
+Au revoir !
+image  formes2bb40
+Durée du filtre médian : 0.061961
+Au revoir !
+image  formes2bb10b
+Durée du filtre médian : 0.064101
+Au revoir !
+image  formes2bb50b
+Durée du filtre médian : 0.082329
+Au revoir !
+image  formes2sp1
+image  formes2bb10
+Durée du filtre médian : 0.077715
+Au revoir !
+image  formes2bb50
+Durée du filtre médian : 0.083366
+Au revoir !
+image  formes2sp2
+Durée du filtre médian : 0.064432
+Au revoir !
+image  formes2bb15b
+Durée du filtre médian : 0.083231
+Au revoir !
+image  formes2bb67b
+Durée du filtre médian : 0.081067
+Au revoir !
+image  formes2sp5
+Durée du filtre médian : 0.081637
+Au revoir !
+image  formes2bb15
+Durée du filtre médian : 0.063717
+Au revoir !
+image  formes2bb67
+Durée du filtre médian : 0.064719
+Au revoir !
+image  formes2bb25b
+Durée du filtre médian : 0.061914
+Au revoir !
+image  formes2bb90b
+Durée du filtre médian : 0.073861
+Au revoir !
+image  formes2bb30b
+Durée du filtre médian : 0.062081
+Au revoir !
+image  formes2bb90
+Durée du filtre médian : 0.062264
+Au revoir !
+taille  15
+image  formes2bb30
+Durée du filtre médian : 0.088167
+Au revoir !
+image  formes2pets1
+Durée du filtre médian : 0.087708
+Au revoir !
+image  formes2bb40b
+Durée du filtre médian : 0.085790
+Au revoir !
+image  formes2pets5
+Durée du filtre médian : 0.085224
+Au revoir !
+image  formes2bb40
+Durée du filtre médian : 0.088222
+Au revoir !
+image  formes2bb10b
+Durée du filtre médian : 0.086862
+Au revoir !
+image  formes2bb50b
+Durée du filtre médian : 0.067402
+Au revoir !
+image  formes2sp1
+image  formes2bb10
+Durée du filtre médian : 0.075750
+Au revoir !
+image  formes2bb50
+Durée du filtre médian : 0.086495
+Au revoir !
+image  formes2sp2
+Durée du filtre médian : 0.070061
+Au revoir !
+image  formes2bb15b
+Durée du filtre médian : 0.068004
+Au revoir !
+image  formes2bb67b
+Durée du filtre médian : 0.087187
+Au revoir !
+image  formes2sp5
+Durée du filtre médian : 0.087400
+Au revoir !
+image  formes2bb15
+Durée du filtre médian : 0.070820
+Au revoir !
+image  formes2bb67
+Durée du filtre médian : 0.068318
+Au revoir !
+image  formes2bb25b
+Durée du filtre médian : 0.090600
+Au revoir !
+image  formes2bb90b
+Durée du filtre médian : 0.086199
+Au revoir !
+image  formes2bb30b
+Durée du filtre médian : 0.084898
+Au revoir !
+image  formes2bb90
+Durée du filtre médian : 0.088659
+Au revoir !

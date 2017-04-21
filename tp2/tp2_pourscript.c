@@ -293,77 +293,36 @@ double EstimationBruit(char* imgOrigin, int t, double p){
 
 int main (int ac, char **av) {  /* av[1] contient le nom de l'image, av[2] le nom du resultat . */
 // Pas assez d'arguments
-if (ac < 3) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
+if (ac < 7) {printf("Usage : %s entree sortie \n",av[0]); exit(1); }
 clock_t debut, fin;
-int n =3;
-int iteration = 20;
-double k = 10;
-double sigma1 = 2;
-double sigma2 = 50;
-double t = 7;
-double r = 2;
-double pourcentile = 0.5;
-int taillebloc = 10;
-
-int choix = 0;
-printf("Menu :\n");
-printf("1 : Filtre Median\n");
-printf("2 : Filtre adaptatif récursif \n");
-printf("3 : Filtre bilatéral\n");
-printf("4 : Méthode à base de patch\n");
-printf("5 : Avoir l'estimation du bruit \n");
-printf("6 : Sortir\n" );
-printf("Quel est votre choix ? ");
-scanf("%d", &choix);
-switch (choix) {
+switch (atoi(av[3])) {
   case 1 :
-    printf("Entrez la taille du filtre : ");
-    scanf("%d", &n);
     debut = clock();
-    filtre_median(av[1], av[2], n);
+    filtre_median(av[1], av[2], atoi(av[4]));
     fin = clock();
     printf("Durée du filtre médian : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 2:
-    printf("Entrez un entier pour le nombre d'itérations : ");
-    scanf("%d", &iteration);
-    printf("Entrez un double pour K : ");
-    scanf("%lf", &k);
     debut = clock();
-    filtre_adaptatif_recursif(av[1], av[2], iteration, k);
+    filtre_adaptatif_recursif(av[1], av[2], atoi(av[4]), atof(av[5]));
     fin = clock();
     printf("Durée du filtre adaptatif récursif : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 3:
-    printf("Entrez un double pour la valeur de sigma1 : ");
-    scanf("%lf", &sigma1);
-    printf("Entrez un double pour la valeur de sigma2 : ");
-    scanf("%lf", &sigma2);
     debut = clock();
-    filtre_bilateral(av[1], av[2], sigma1, sigma2);
+    filtre_bilateral(av[1], av[2], atof(av[4]), atof(av[5]));
     fin = clock();
     printf("Durée du filtre bilatéral : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 4:
-    printf("Entrez un double pour la valeur de sigma : ");
-    scanf("%lf", &sigma1);
-    printf("Entrez un double pour la valeur de la taille des régions : ");
-    scanf("%lf", &t);
-    printf("Entrez un double pour la valeur de la taille des patchs : ");
-    scanf("%lf", &r);
     debut = clock();
-    filtre_nlmeans(av[1], av[2], t, r, sigma1);
+    filtre_nlmeans(av[1], av[2], atof(av[4]), atof(av[5]), atof(av[6]));
     fin = clock();
     printf("Durée de la méthode avec patch : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 5:
-  // Les globulesbb seg fault jsp pourquoi !
-    printf("Entrez un entier pour la taille des blocs : ");
-    scanf("%d", &taillebloc);
-    printf("Entrez un double pour la valeur du pourcentile (ex : 5.0 pour 5 pourcent) : ");
-    scanf("%lf", &pourcentile);
     debut = clock();
-    double bruit = EstimationBruit(av[1], taillebloc, pourcentile);
+    double bruit = EstimationBruit(av[1], atoi(av[4]), atof(av[5]));
     fprintf(stdout, "bruit : %f \n", bruit);
     fin = clock();
     printf("Durée de l'estimation du bruit: %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);

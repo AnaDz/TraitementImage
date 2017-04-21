@@ -1,0 +1,2103 @@
+iteration  1
+k  5
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.005401
+Au revoir !
+k  10
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.005586
+Au revoir !
+k  15
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.005687
+Au revoir !
+k  20
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.003973
+Au revoir !
+k  25
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.003881
+Au revoir !
+k  5
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.005581
+Au revoir !
+k  10
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.004047
+Au revoir !
+k  15
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.005599
+Au revoir !
+k  20
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.003885
+Au revoir !
+k  25
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.003863
+Au revoir !
+k  5
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.003899
+Au revoir !
+k  10
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.003798
+Au revoir !
+k  15
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.003930
+Au revoir !
+k  20
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.004053
+Au revoir !
+k  25
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.003888
+Au revoir !
+k  5
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.003860
+Au revoir !
+k  10
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.003862
+Au revoir !
+k  15
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.005266
+Au revoir !
+k  20
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.003833
+Au revoir !
+k  25
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.003818
+Au revoir !
+k  5
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.003824
+Au revoir !
+k  10
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.003795
+Au revoir !
+k  15
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.003828
+Au revoir !
+k  20
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.003830
+Au revoir !
+k  25
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.003900
+Au revoir !
+k  5
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.003814
+Au revoir !
+k  10
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.003856
+Au revoir !
+k  15
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.003793
+Au revoir !
+k  20
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.005293
+Au revoir !
+k  25
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.004006
+Au revoir !
+k  5
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.003862
+Au revoir !
+k  10
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.003834
+Au revoir !
+k  15
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.003913
+Au revoir !
+k  20
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.003817
+Au revoir !
+k  25
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.003848
+Au revoir !
+k  5
+image  formes2sp1
+Lecture image impossible
+k  10
+image  formes2sp1
+Lecture image impossible
+k  15
+image  formes2sp1
+Lecture image impossible
+k  20
+image  formes2sp1
+Lecture image impossible
+k  25
+image  formes2sp1
+Lecture image impossible
+k  5
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.003809
+Au revoir !
+k  10
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.004010
+Au revoir !
+k  15
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.003839
+Au revoir !
+k  20
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.003932
+Au revoir !
+k  25
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.003885
+Au revoir !
+k  5
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.005259
+Au revoir !
+k  10
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.003906
+Au revoir !
+k  15
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.003997
+Au revoir !
+k  20
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.004009
+Au revoir !
+k  25
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.003827
+Au revoir !
+k  5
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.003906
+Au revoir !
+k  10
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.003844
+Au revoir !
+k  15
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.004190
+Au revoir !
+k  20
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.003815
+Au revoir !
+k  25
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.003908
+Au revoir !
+k  5
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.003738
+Au revoir !
+k  10
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.003866
+Au revoir !
+k  15
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.003851
+Au revoir !
+k  20
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.003897
+Au revoir !
+k  25
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.003866
+Au revoir !
+k  5
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.004070
+Au revoir !
+k  10
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.005347
+Au revoir !
+k  15
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.004003
+Au revoir !
+k  20
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.003943
+Au revoir !
+k  25
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.003833
+Au revoir !
+k  5
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.005143
+Au revoir !
+k  10
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.003981
+Au revoir !
+k  15
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.005112
+Au revoir !
+k  20
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.004181
+Au revoir !
+k  25
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.005389
+Au revoir !
+k  5
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.003876
+Au revoir !
+k  10
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.003835
+Au revoir !
+k  15
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.004070
+Au revoir !
+k  20
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.004327
+Au revoir !
+k  25
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.003861
+Au revoir !
+k  5
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.003829
+Au revoir !
+k  10
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.003849
+Au revoir !
+k  15
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.003841
+Au revoir !
+k  20
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.003831
+Au revoir !
+k  25
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.003894
+Au revoir !
+k  5
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.003808
+Au revoir !
+k  10
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.003998
+Au revoir !
+k  15
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.005473
+Au revoir !
+k  20
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.003744
+Au revoir !
+k  25
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.003826
+Au revoir !
+k  5
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.004272
+Au revoir !
+k  10
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.003887
+Au revoir !
+k  15
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.003875
+Au revoir !
+k  20
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.003882
+Au revoir !
+k  25
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.003818
+Au revoir !
+k  5
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.003859
+Au revoir !
+k  10
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.003953
+Au revoir !
+k  15
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.003745
+Au revoir !
+k  20
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.004974
+Au revoir !
+k  25
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.003989
+Au revoir !
+k  5
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.003810
+Au revoir !
+k  10
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.003990
+Au revoir !
+k  15
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.003833
+Au revoir !
+k  20
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.003881
+Au revoir !
+k  25
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.005121
+Au revoir !
+iteration  2
+k  5
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.320866
+Au revoir !
+k  10
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.314263
+Au revoir !
+k  15
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.352597
+Au revoir !
+k  20
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.343855
+Au revoir !
+k  25
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.312032
+Au revoir !
+k  5
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.256743
+Au revoir !
+k  10
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.256298
+Au revoir !
+k  15
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.255697
+Au revoir !
+k  20
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.286508
+Au revoir !
+k  25
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.271588
+Au revoir !
+k  5
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.315025
+Au revoir !
+k  10
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.329510
+Au revoir !
+k  15
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.338129
+Au revoir !
+k  20
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.314202
+Au revoir !
+k  25
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.322776
+Au revoir !
+k  5
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.310056
+Au revoir !
+k  10
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.294287
+Au revoir !
+k  15
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.298354
+Au revoir !
+k  20
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.290859
+Au revoir !
+k  25
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.289296
+Au revoir !
+k  5
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.333550
+Au revoir !
+k  10
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.322870
+Au revoir !
+k  15
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.317803
+Au revoir !
+k  20
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.319418
+Au revoir !
+k  25
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.326293
+Au revoir !
+k  5
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.331191
+Au revoir !
+k  10
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.329799
+Au revoir !
+k  15
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.317026
+Au revoir !
+k  20
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.320618
+Au revoir !
+k  25
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.335013
+Au revoir !
+k  5
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.315637
+Au revoir !
+k  10
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.368184
+Au revoir !
+k  15
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.392995
+Au revoir !
+k  20
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.395118
+Au revoir !
+k  25
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.361427
+Au revoir !
+k  5
+image  formes2sp1
+Lecture image impossible
+k  10
+image  formes2sp1
+Lecture image impossible
+k  15
+image  formes2sp1
+Lecture image impossible
+k  20
+image  formes2sp1
+Lecture image impossible
+k  25
+image  formes2sp1
+Lecture image impossible
+k  5
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.323051
+Au revoir !
+k  10
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.314819
+Au revoir !
+k  15
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.318273
+Au revoir !
+k  20
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.320437
+Au revoir !
+k  25
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.324604
+Au revoir !
+k  5
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.322849
+Au revoir !
+k  10
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.324965
+Au revoir !
+k  15
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.332636
+Au revoir !
+k  20
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.324383
+Au revoir !
+k  25
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.332822
+Au revoir !
+k  5
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.339490
+Au revoir !
+k  10
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.327142
+Au revoir !
+k  15
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.353246
+Au revoir !
+k  20
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.331977
+Au revoir !
+k  25
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.340413
+Au revoir !
+k  5
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.357852
+Au revoir !
+k  10
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.326781
+Au revoir !
+k  15
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.349168
+Au revoir !
+k  20
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.338157
+Au revoir !
+k  25
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.344478
+Au revoir !
+k  5
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.340705
+Au revoir !
+k  10
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.340407
+Au revoir !
+k  15
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.348722
+Au revoir !
+k  20
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.342378
+Au revoir !
+k  25
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.329455
+Au revoir !
+k  5
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.355212
+Au revoir !
+k  10
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.350413
+Au revoir !
+k  15
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.354712
+Au revoir !
+k  20
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.329362
+Au revoir !
+k  25
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.326705
+Au revoir !
+k  5
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.320025
+Au revoir !
+k  10
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.315899
+Au revoir !
+k  15
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.329000
+Au revoir !
+k  20
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.316235
+Au revoir !
+k  25
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.324066
+Au revoir !
+k  5
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.335247
+Au revoir !
+k  10
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.325150
+Au revoir !
+k  15
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.319590
+Au revoir !
+k  20
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.320387
+Au revoir !
+k  25
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.313232
+Au revoir !
+k  5
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.321663
+Au revoir !
+k  10
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.316237
+Au revoir !
+k  15
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.314150
+Au revoir !
+k  20
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.352298
+Au revoir !
+k  25
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.315954
+Au revoir !
+k  5
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.318430
+Au revoir !
+k  10
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.325329
+Au revoir !
+k  15
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.318281
+Au revoir !
+k  20
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.325748
+Au revoir !
+k  25
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.334063
+Au revoir !
+k  5
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.332774
+Au revoir !
+k  10
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.337664
+Au revoir !
+k  15
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.329158
+Au revoir !
+k  20
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.331774
+Au revoir !
+k  25
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.331487
+Au revoir !
+k  5
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.344396
+Au revoir !
+k  10
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.338686
+Au revoir !
+k  15
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.327995
+Au revoir !
+k  20
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.355981
+Au revoir !
+k  25
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.332617
+Au revoir !
+iteration  4
+k  5
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.988501
+Au revoir !
+k  10
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.976977
+Au revoir !
+k  15
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.984198
+Au revoir !
+k  20
+image  formes2bb30
+Durée du filtre adaptatif récursif : 1.049003
+Au revoir !
+k  25
+image  formes2bb30
+Durée du filtre adaptatif récursif : 0.982166
+Au revoir !
+k  5
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.883287
+Au revoir !
+k  10
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.894602
+Au revoir !
+k  15
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.872713
+Au revoir !
+k  20
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.883515
+Au revoir !
+k  25
+image  formes2pets1
+Durée du filtre adaptatif récursif : 0.884695
+Au revoir !
+k  5
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 1.005919
+Au revoir !
+k  10
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 1.000789
+Au revoir !
+k  15
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.994658
+Au revoir !
+k  20
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 1.023808
+Au revoir !
+k  25
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 0.982870
+Au revoir !
+k  5
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.939106
+Au revoir !
+k  10
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.932615
+Au revoir !
+k  15
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.928662
+Au revoir !
+k  20
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.936865
+Au revoir !
+k  25
+image  formes2pets5
+Durée du filtre adaptatif récursif : 0.967364
+Au revoir !
+k  5
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.996292
+Au revoir !
+k  10
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.993343
+Au revoir !
+k  15
+image  formes2bb40
+Durée du filtre adaptatif récursif : 1.003273
+Au revoir !
+k  20
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.987474
+Au revoir !
+k  25
+image  formes2bb40
+Durée du filtre adaptatif récursif : 0.986031
+Au revoir !
+k  5
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.992634
+Au revoir !
+k  10
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.995684
+Au revoir !
+k  15
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.964153
+Au revoir !
+k  20
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.957442
+Au revoir !
+k  25
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 0.965489
+Au revoir !
+k  5
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.962500
+Au revoir !
+k  10
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.972770
+Au revoir !
+k  15
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 1.020822
+Au revoir !
+k  20
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.962570
+Au revoir !
+k  25
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 0.966623
+Au revoir !
+k  5
+image  formes2sp1
+Lecture image impossible
+k  10
+image  formes2sp1
+Lecture image impossible
+k  15
+image  formes2sp1
+Lecture image impossible
+k  20
+image  formes2sp1
+Lecture image impossible
+k  25
+image  formes2sp1
+Lecture image impossible
+k  5
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.976634
+Au revoir !
+k  10
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.958276
+Au revoir !
+k  15
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.961603
+Au revoir !
+k  20
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.959302
+Au revoir !
+k  25
+image  formes2bb10
+Durée du filtre adaptatif récursif : 0.955574
+Au revoir !
+k  5
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.969469
+Au revoir !
+k  10
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.956482
+Au revoir !
+k  15
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.972714
+Au revoir !
+k  20
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.952113
+Au revoir !
+k  25
+image  formes2bb50
+Durée du filtre adaptatif récursif : 0.972193
+Au revoir !
+k  5
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.972700
+Au revoir !
+k  10
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.969904
+Au revoir !
+k  15
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.956026
+Au revoir !
+k  20
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.959448
+Au revoir !
+k  25
+image  formes2sp2
+Durée du filtre adaptatif récursif : 0.967790
+Au revoir !
+k  5
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.981011
+Au revoir !
+k  10
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.966617
+Au revoir !
+k  15
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.969279
+Au revoir !
+k  20
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.961997
+Au revoir !
+k  25
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 0.975547
+Au revoir !
+k  5
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.968836
+Au revoir !
+k  10
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.968320
+Au revoir !
+k  15
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.971985
+Au revoir !
+k  20
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.958369
+Au revoir !
+k  25
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 0.952965
+Au revoir !
+k  5
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.979664
+Au revoir !
+k  10
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.959248
+Au revoir !
+k  15
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.972937
+Au revoir !
+k  20
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.998135
+Au revoir !
+k  25
+image  formes2sp5
+Durée du filtre adaptatif récursif : 0.986632
+Au revoir !
+k  5
+image  formes2bb15
+Durée du filtre adaptatif récursif : 1.000826
+Au revoir !
+k  10
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.991473
+Au revoir !
+k  15
+image  formes2bb15
+Durée du filtre adaptatif récursif : 1.013033
+Au revoir !
+k  20
+image  formes2bb15
+Durée du filtre adaptatif récursif : 0.982036
+Au revoir !
+k  25
+image  formes2bb15
+Durée du filtre adaptatif récursif : 1.016220
+Au revoir !
+k  5
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.993441
+Au revoir !
+k  10
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.965558
+Au revoir !
+k  15
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.966119
+Au revoir !
+k  20
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.967019
+Au revoir !
+k  25
+image  formes2bb67
+Durée du filtre adaptatif récursif : 0.997714
+Au revoir !
+k  5
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.972442
+Au revoir !
+k  10
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.977174
+Au revoir !
+k  15
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.961750
+Au revoir !
+k  20
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.959950
+Au revoir !
+k  25
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 0.956530
+Au revoir !
+k  5
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.971592
+Au revoir !
+k  10
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.978516
+Au revoir !
+k  15
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.967796
+Au revoir !
+k  20
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.958213
+Au revoir !
+k  25
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 0.960110
+Au revoir !
+k  5
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.958209
+Au revoir !
+k  10
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.958330
+Au revoir !
+k  15
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 1.002050
+Au revoir !
+k  20
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.963272
+Au revoir !
+k  25
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 0.956798
+Au revoir !
+k  5
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.963019
+Au revoir !
+k  10
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.964205
+Au revoir !
+k  15
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.960032
+Au revoir !
+k  20
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.965610
+Au revoir !
+k  25
+image  formes2bb90
+Durée du filtre adaptatif récursif : 0.967656
+Au revoir !
+iteration  6
+k  5
+image  formes2bb30
+Durée du filtre adaptatif récursif : 1.599535
+Au revoir !
+k  10
+image  formes2bb30
+Durée du filtre adaptatif récursif : 1.593263
+Au revoir !
+k  15
+image  formes2bb30
+Durée du filtre adaptatif récursif : 1.615093
+Au revoir !
+k  20
+image  formes2bb30
+Durée du filtre adaptatif récursif : 1.624101
+Au revoir !
+k  25
+image  formes2bb30
+Durée du filtre adaptatif récursif : 1.592382
+Au revoir !
+k  5
+image  formes2pets1
+Durée du filtre adaptatif récursif : 1.493943
+Au revoir !
+k  10
+image  formes2pets1
+Durée du filtre adaptatif récursif : 1.508349
+Au revoir !
+k  15
+image  formes2pets1
+Durée du filtre adaptatif récursif : 1.511080
+Au revoir !
+k  20
+image  formes2pets1
+Durée du filtre adaptatif récursif : 1.513563
+Au revoir !
+k  25
+image  formes2pets1
+Durée du filtre adaptatif récursif : 1.508375
+Au revoir !
+k  5
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 1.600422
+Au revoir !
+k  10
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 1.600415
+Au revoir !
+k  15
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 1.626440
+Au revoir !
+k  20
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 1.606400
+Au revoir !
+k  25
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 1.594112
+Au revoir !
+k  5
+image  formes2pets5
+Durée du filtre adaptatif récursif : 1.634133
+Au revoir !
+k  10
+image  formes2pets5
+Durée du filtre adaptatif récursif : 1.567550
+Au revoir !
+k  15
+image  formes2pets5
+Durée du filtre adaptatif récursif : 1.627147
+Au revoir !
+k  20
+image  formes2pets5
+Durée du filtre adaptatif récursif : 1.572430
+Au revoir !
+k  25
+image  formes2pets5
+Durée du filtre adaptatif récursif : 1.587136
+Au revoir !
+k  5
+image  formes2bb40
+Durée du filtre adaptatif récursif : 1.596555
+Au revoir !
+k  10
+image  formes2bb40
+Durée du filtre adaptatif récursif : 1.600416
+Au revoir !
+k  15
+image  formes2bb40
+Durée du filtre adaptatif récursif : 1.609052
+Au revoir !
+k  20
+image  formes2bb40
+Durée du filtre adaptatif récursif : 1.597318
+Au revoir !
+k  25
+image  formes2bb40
+Durée du filtre adaptatif récursif : 1.612982
+Au revoir !
+k  5
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 1.605794
+Au revoir !
+k  10
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 1.659375
+Au revoir !
+k  15
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 1.625984
+Au revoir !
+k  20
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 1.614480
+Au revoir !
+k  25
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 1.610055
+Au revoir !
+k  5
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 1.609535
+Au revoir !
+k  10
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 1.615173
+Au revoir !
+k  15
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 1.650567
+Au revoir !
+k  20
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 1.614293
+Au revoir !
+k  25
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 1.598951
+Au revoir !
+k  5
+image  formes2sp1
+Lecture image impossible
+k  10
+image  formes2sp1
+Lecture image impossible
+k  15
+image  formes2sp1
+Lecture image impossible
+k  20
+image  formes2sp1
+Lecture image impossible
+k  25
+image  formes2sp1
+Lecture image impossible
+k  5
+image  formes2bb10
+Durée du filtre adaptatif récursif : 1.607220
+Au revoir !
+k  10
+image  formes2bb10
+Durée du filtre adaptatif récursif : 1.613610
+Au revoir !
+k  15
+image  formes2bb10
+Durée du filtre adaptatif récursif : 1.625079
+Au revoir !
+k  20
+image  formes2bb10
+Durée du filtre adaptatif récursif : 1.608272
+Au revoir !
+k  25
+image  formes2bb10
+Durée du filtre adaptatif récursif : 1.596944
+Au revoir !
+k  5
+image  formes2bb50
+Durée du filtre adaptatif récursif : 1.600278
+Au revoir !
+k  10
+image  formes2bb50
+Durée du filtre adaptatif récursif : 1.632052
+Au revoir !
+k  15
+image  formes2bb50
+Durée du filtre adaptatif récursif : 1.715337
+Au revoir !
+k  20
+image  formes2bb50
+Durée du filtre adaptatif récursif : 1.624390
+Au revoir !
+k  25
+image  formes2bb50
+Durée du filtre adaptatif récursif : 1.597619
+Au revoir !
+k  5
+image  formes2sp2
+Durée du filtre adaptatif récursif : 1.606885
+Au revoir !
+k  10
+image  formes2sp2
+Durée du filtre adaptatif récursif : 1.714091
+Au revoir !
+k  15
+image  formes2sp2
+Durée du filtre adaptatif récursif : 1.662957
+Au revoir !
+k  20
+image  formes2sp2
+Durée du filtre adaptatif récursif : 1.655498
+Au revoir !
+k  25
+image  formes2sp2
+Durée du filtre adaptatif récursif : 1.636824
+Au revoir !
+k  5
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 1.633937
+Au revoir !
+k  10
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 1.671138
+Au revoir !
+k  15
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 1.611777
+Au revoir !
+k  20
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 1.582782
+Au revoir !
+k  25
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 1.599760
+Au revoir !
+k  5
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 1.643160
+Au revoir !
+k  10
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 1.654985
+Au revoir !
+k  15
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 1.588454
+Au revoir !
+k  20
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 1.638915
+Au revoir !
+k  25
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 1.597055
+Au revoir !
+k  5
+image  formes2sp5
+Durée du filtre adaptatif récursif : 1.581346
+Au revoir !
+k  10
+image  formes2sp5
+Durée du filtre adaptatif récursif : 1.586640
+Au revoir !
+k  15
+image  formes2sp5
+Durée du filtre adaptatif récursif : 1.593544
+Au revoir !
+k  20
+image  formes2sp5
+Durée du filtre adaptatif récursif : 1.570657
+Au revoir !
+k  25
+image  formes2sp5
+Durée du filtre adaptatif récursif : 1.580970
+Au revoir !
+k  5
+image  formes2bb15
+Durée du filtre adaptatif récursif : 1.591761
+Au revoir !
+k  10
+image  formes2bb15
+Durée du filtre adaptatif récursif : 1.589988
+Au revoir !
+k  15
+image  formes2bb15
+Durée du filtre adaptatif récursif : 1.597365
+Au revoir !
+k  20
+image  formes2bb15
+Durée du filtre adaptatif récursif : 1.599771
+Au revoir !
+k  25
+image  formes2bb15
+Durée du filtre adaptatif récursif : 1.603438
+Au revoir !
+k  5
+image  formes2bb67
+Durée du filtre adaptatif récursif : 1.656105
+Au revoir !
+k  10
+image  formes2bb67
+Durée du filtre adaptatif récursif : 1.619199
+Au revoir !
+k  15
+image  formes2bb67
+Durée du filtre adaptatif récursif : 1.594586
+Au revoir !
+k  20
+image  formes2bb67
+Durée du filtre adaptatif récursif : 1.600115
+Au revoir !
+k  25
+image  formes2bb67
+Durée du filtre adaptatif récursif : 1.591818
+Au revoir !
+k  5
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 1.589065
+Au revoir !
+k  10
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 1.621655
+Au revoir !
+k  15
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 1.606113
+Au revoir !
+k  20
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 1.599429
+Au revoir !
+k  25
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 1.587880
+Au revoir !
+k  5
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 1.617906
+Au revoir !
+k  10
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 1.605176
+Au revoir !
+k  15
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 1.594445
+Au revoir !
+k  20
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 1.594312
+Au revoir !
+k  25
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 1.596595
+Au revoir !
+k  5
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 1.580776
+Au revoir !
+k  10
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 1.595392
+Au revoir !
+k  15
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 1.582026
+Au revoir !
+k  20
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 1.588290
+Au revoir !
+k  25
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 1.592894
+Au revoir !
+k  5
+image  formes2bb90
+Durée du filtre adaptatif récursif : 1.595938
+Au revoir !
+k  10
+image  formes2bb90
+Durée du filtre adaptatif récursif : 1.590412
+Au revoir !
+k  15
+image  formes2bb90
+Durée du filtre adaptatif récursif : 1.595242
+Au revoir !
+k  20
+image  formes2bb90
+Durée du filtre adaptatif récursif : 1.600274
+Au revoir !
+k  25
+image  formes2bb90
+Durée du filtre adaptatif récursif : 1.601416
+Au revoir !
+iteration  10
+k  5
+image  formes2bb30
+Durée du filtre adaptatif récursif : 2.866583
+Au revoir !
+k  10
+image  formes2bb30
+Durée du filtre adaptatif récursif : 2.858240
+Au revoir !
+k  15
+image  formes2bb30
+Durée du filtre adaptatif récursif : 2.846163
+Au revoir !
+k  20
+image  formes2bb30
+Durée du filtre adaptatif récursif : 2.849644
+Au revoir !
+k  25
+image  formes2bb30
+Durée du filtre adaptatif récursif : 2.869012
+Au revoir !
+k  5
+image  formes2pets1
+Durée du filtre adaptatif récursif : 2.736017
+Au revoir !
+k  10
+image  formes2pets1
+Durée du filtre adaptatif récursif : 2.765579
+Au revoir !
+k  15
+image  formes2pets1
+Durée du filtre adaptatif récursif : 2.748739
+Au revoir !
+k  20
+image  formes2pets1
+Durée du filtre adaptatif récursif : 2.779042
+Au revoir !
+k  25
+image  formes2pets1
+Durée du filtre adaptatif récursif : 2.766003
+Au revoir !
+k  5
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 2.869787
+Au revoir !
+k  10
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 2.908019
+Au revoir !
+k  15
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 2.858851
+Au revoir !
+k  20
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 2.861620
+Au revoir !
+k  25
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 2.867817
+Au revoir !
+k  5
+image  formes2pets5
+Durée du filtre adaptatif récursif : 2.817869
+Au revoir !
+k  10
+image  formes2pets5
+Durée du filtre adaptatif récursif : 2.887246
+Au revoir !
+k  15
+image  formes2pets5
+Durée du filtre adaptatif récursif : 2.946703
+Au revoir !
+k  20
+image  formes2pets5
+Durée du filtre adaptatif récursif : 2.931887
+Au revoir !
+k  25
+image  formes2pets5
+Durée du filtre adaptatif récursif : 2.966117
+Au revoir !
+k  5
+image  formes2bb40
+Durée du filtre adaptatif récursif : 2.988427
+Au revoir !
+k  10
+image  formes2bb40
+Durée du filtre adaptatif récursif : 2.950947
+Au revoir !
+k  15
+image  formes2bb40
+Durée du filtre adaptatif récursif : 2.894705
+Au revoir !
+k  20
+image  formes2bb40
+Durée du filtre adaptatif récursif : 3.075708
+Au revoir !
+k  25
+image  formes2bb40
+Durée du filtre adaptatif récursif : 2.862937
+Au revoir !
+k  5
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 2.804724
+Au revoir !
+k  10
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 2.837161
+Au revoir !
+k  15
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 2.946651
+Au revoir !
+k  20
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 2.843122
+Au revoir !
+k  25
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 2.827018
+Au revoir !
+k  5
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 2.858648
+Au revoir !
+k  10
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 2.921627
+Au revoir !
+k  15
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 2.789063
+Au revoir !
+k  20
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 2.856362
+Au revoir !
+k  25
+image  formes2bb50b
+Durée du filtre adaptatif récursif : 3.199055
+Au revoir !
+k  5
+image  formes2sp1
+Lecture image impossible
+k  10
+image  formes2sp1
+Lecture image impossible
+k  15
+image  formes2sp1
+Lecture image impossible
+k  20
+image  formes2sp1
+Lecture image impossible
+k  25
+image  formes2sp1
+Lecture image impossible
+k  5
+image  formes2bb10
+Durée du filtre adaptatif récursif : 3.022549
+Au revoir !
+k  10
+image  formes2bb10
+Durée du filtre adaptatif récursif : 3.101966
+Au revoir !
+k  15
+image  formes2bb10
+Durée du filtre adaptatif récursif : 3.128979
+Au revoir !
+k  20
+image  formes2bb10
+Durée du filtre adaptatif récursif : 3.142278
+Au revoir !
+k  25
+image  formes2bb10
+Durée du filtre adaptatif récursif : 3.140202
+Au revoir !
+k  5
+image  formes2bb50
+Durée du filtre adaptatif récursif : 3.136720
+Au revoir !
+k  10
+image  formes2bb50
+Durée du filtre adaptatif récursif : 3.261067
+Au revoir !
+k  15
+image  formes2bb50
+Durée du filtre adaptatif récursif : 3.350418
+Au revoir !
+k  20
+image  formes2bb50
+Durée du filtre adaptatif récursif : 3.379366
+Au revoir !
+k  25
+image  formes2bb50
+Durée du filtre adaptatif récursif : 3.370900
+Au revoir !
+k  5
+image  formes2sp2
+Durée du filtre adaptatif récursif : 3.281662
+Au revoir !
+k  10
+image  formes2sp2
+Durée du filtre adaptatif récursif : 3.142633
+Au revoir !
+k  15
+image  formes2sp2
+Durée du filtre adaptatif récursif : 3.262746
+Au revoir !
+k  20
+image  formes2sp2
+Durée du filtre adaptatif récursif : 3.063165
+Au revoir !
+k  25
+image  formes2sp2
+Durée du filtre adaptatif récursif : 3.124156
+Au revoir !
+k  5
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 3.210638
+Au revoir !
+k  10
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 3.019815
+Au revoir !
+k  15
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 3.046442
+Au revoir !
+k  20
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 3.189686
+Au revoir !
+k  25
+image  formes2bb15b
+Durée du filtre adaptatif récursif : 3.261258
+Au revoir !
+k  5
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 2.958517
+Au revoir !
+k  10
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 2.922020
+Au revoir !
+k  15
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 2.931611
+Au revoir !
+k  20
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 3.035950
+Au revoir !
+k  25
+image  formes2bb67b
+Durée du filtre adaptatif récursif : 2.933122
+Au revoir !
+k  5
+image  formes2sp5
+Durée du filtre adaptatif récursif : 2.970186
+Au revoir !
+k  10
+image  formes2sp5
+Durée du filtre adaptatif récursif : 2.876352
+Au revoir !
+k  15
+image  formes2sp5
+Durée du filtre adaptatif récursif : 2.828535
+Au revoir !
+k  20
+image  formes2sp5
+Durée du filtre adaptatif récursif : 2.850975
+Au revoir !
+k  25
+image  formes2sp5
+Durée du filtre adaptatif récursif : 2.836743
+Au revoir !
+k  5
+image  formes2bb15
+Durée du filtre adaptatif récursif : 2.785127
+Au revoir !
+k  10
+image  formes2bb15
+Durée du filtre adaptatif récursif : 2.834557
+Au revoir !
+k  15
+image  formes2bb15
+Durée du filtre adaptatif récursif : 2.811550
+Au revoir !
+k  20
+image  formes2bb15
+Durée du filtre adaptatif récursif : 2.805202
+Au revoir !
+k  25
+image  formes2bb15
+Durée du filtre adaptatif récursif : 2.796236
+Au revoir !
+k  5
+image  formes2bb67
+Durée du filtre adaptatif récursif : 2.851799
+Au revoir !
+k  10
+image  formes2bb67
+Durée du filtre adaptatif récursif : 2.863868
+Au revoir !
+k  15
+image  formes2bb67
+Durée du filtre adaptatif récursif : 2.840315
+Au revoir !
+k  20
+image  formes2bb67
+Durée du filtre adaptatif récursif : 3.102793
+Au revoir !
+k  25
+image  formes2bb67
+Durée du filtre adaptatif récursif : 3.154713
+Au revoir !
+k  5
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 3.074691
+Au revoir !
+k  10
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 3.142980
+Au revoir !
+k  15
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 3.055648
+Au revoir !
+k  20
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 3.202395
+Au revoir !
+k  25
+image  formes2bb25b
+Durée du filtre adaptatif récursif : 3.165043
+Au revoir !
+k  5
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 3.328206
+Au revoir !
+k  10
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 3.103698
+Au revoir !
+k  15
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 2.988384
+Au revoir !
+k  20
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 3.172826
+Au revoir !
+k  25
+image  formes2bb90b
+Durée du filtre adaptatif récursif : 3.218007
+Au revoir !
+k  5
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 2.982332
+Au revoir !
+k  10
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 2.837488
+Au revoir !
+k  15
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 3.006518
+Au revoir !
+k  20
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 3.013216
+Au revoir !
+k  25
+image  formes2bb30b
+Durée du filtre adaptatif récursif : 2.925419
+Au revoir !
+k  5
+image  formes2bb90
+Durée du filtre adaptatif récursif : 3.133701
+Au revoir !
+k  10
+image  formes2bb90
+Durée du filtre adaptatif récursif : 3.041773
+Au revoir !
+k  15
+image  formes2bb90
+Durée du filtre adaptatif récursif : 2.995868
+Au revoir !
+k  20
+image  formes2bb90
+Durée du filtre adaptatif récursif : 2.948620
+Au revoir !
+k  25
+image  formes2bb90
+Durée du filtre adaptatif récursif : 2.904343
+Au revoir !
+iteration  15
+k  5
+image  formes2bb30
+Durée du filtre adaptatif récursif : 4.507383
+Au revoir !
+k  10
+image  formes2bb30
+Durée du filtre adaptatif récursif : 4.511529
+Au revoir !
+k  15
+image  formes2bb30
+Durée du filtre adaptatif récursif : 4.477721
+Au revoir !
+k  20
+image  formes2bb30
+Durée du filtre adaptatif récursif : 4.702363
+Au revoir !
+k  25
+image  formes2bb30
+Durée du filtre adaptatif récursif : 4.386685
+Au revoir !
+k  5
+image  formes2pets1
+Durée du filtre adaptatif récursif : 4.360598
+Au revoir !
+k  10
+image  formes2pets1
+Durée du filtre adaptatif récursif : 4.642743
+Au revoir !
+k  15
+image  formes2pets1
+Durée du filtre adaptatif récursif : 4.524443
+Au revoir !
+k  20
+image  formes2pets1
+Durée du filtre adaptatif récursif : 4.562430
+Au revoir !
+k  25
+image  formes2pets1
+Durée du filtre adaptatif récursif : 4.926909
+Au revoir !
+k  5
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 4.950953
+Au revoir !
+k  10
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 4.897381
+Au revoir !
+k  15
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 4.853830
+Au revoir !
+k  20
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 4.837145
+Au revoir !
+k  25
+image  formes2bb40b
+Durée du filtre adaptatif récursif : 5.062068
+Au revoir !
+k  5
+image  formes2pets5
+Durée du filtre adaptatif récursif : 5.099628
+Au revoir !
+k  10
+image  formes2pets5
+Durée du filtre adaptatif récursif : 4.424031
+Au revoir !
+k  15
+image  formes2pets5
+Durée du filtre adaptatif récursif : 4.376649
+Au revoir !
+k  20
+image  formes2pets5
+Durée du filtre adaptatif récursif : 4.412963
+Au revoir !
+k  25
+image  formes2pets5
+Durée du filtre adaptatif récursif : 4.834897
+Au revoir !
+k  5
+image  formes2bb40
+Durée du filtre adaptatif récursif : 4.975301
+Au revoir !
+k  10
+image  formes2bb40
+Durée du filtre adaptatif récursif : 4.816963
+Au revoir !
+k  15
+image  formes2bb40
+Durée du filtre adaptatif récursif : 5.002224
+Au revoir !
+k  20
+image  formes2bb40
+Durée du filtre adaptatif récursif : 4.980240
+Au revoir !
+k  25
+image  formes2bb40
+Durée du filtre adaptatif récursif : 4.908520
+Au revoir !
+k  5
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 4.798145
+Au revoir !
+k  10
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 4.575927
+Au revoir !
+k  15
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 4.668262
+Au revoir !
+k  20
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 4.616144
+Au revoir !
+k  25
+image  formes2bb10b
+Durée du filtre adaptatif récursif : 4.680144
+Au revoir !
+k  5
+image  formes2bb50b
