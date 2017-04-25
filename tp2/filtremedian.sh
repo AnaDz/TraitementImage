@@ -13,8 +13,9 @@ do
   for img in "${Imgform2[@]}"
   do
     echo "image " $img
-    ./bin/tp2_pourscript "images/"${img}".pgm" "images/median/forme2/"${img}"_"${taille}".pgm" 1 ${taille} 0 0 0
-
+    ./bin/tp2_pourscript "images/"${img}".pgm" "images/median/"${img}"_"${taille}".pgm" 1 ${taille} 0 0 0
+    echo "PNSR "
+    ./bin/PNSR "images/formes2.pgm" "images/median/"${img}"_"${taille}".pgm"
   done
 
 done

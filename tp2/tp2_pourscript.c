@@ -211,7 +211,6 @@ void filtre_nlmeans(char* imgOrigin, char* imgCible,
 }
 
 double EstimationBruit(char* imgOrigin, int t, double p){
-  /* TODO : prendre les bords en compte ! */
   int nL, nC;
   unsigned char **imO = NULL;
   imO = lectureimagepgm(imgOrigin, &nL, &nC);
@@ -238,7 +237,7 @@ double EstimationBruit(char* imgOrigin, int t, double p){
 
  for (int x=0; x<t; x++){
     for(int y=0; y<t; y++){
-      n =(double) (x+t)*(y+t);
+      n =(double) (x+t+1)*(y+t+1);
       variance = 0;
       moyenne = 0;
       for (int i =0; i<=x+t; i++){
@@ -306,7 +305,8 @@ switch (atoi(av[3])) {
     debut = clock();
     filtre_adaptatif_recursif(av[1], av[2], atoi(av[4]), atof(av[5]));
     fin = clock();
-    printf("Durée du filtre adaptatif récursif : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+    //printf("Durée du filtre adaptatif récursif : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+    //printf("%f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 3:
     debut = clock();
@@ -331,6 +331,5 @@ switch (atoi(av[3])) {
     printf("Vous avez entré un mauvais chiffre, au revoir ! :) \n" );
     break;
 }
-printf("Au revoir !\n");
 return EXIT_SUCCESS;
 }

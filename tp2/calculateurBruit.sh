@@ -8,6 +8,6 @@ Img=("formes2bb30.pgm" "globulesbb50.pgm" "formes2bb40b.pgm" "formes2bb40.pgm"
 for img in "${Img[@]}"
 do
   echo "image" $img
-  ./bin/tp2_pourscript "images/"${img} "images/pasdesortie.pgm" 5 10 0.5 0 
+  ./bin/tp2_pourscript "images/"${img} "images/pasdesortie.pgm" 5 10 0.5 0
 
 done
