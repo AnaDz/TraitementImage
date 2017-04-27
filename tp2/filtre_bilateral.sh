@@ -29,7 +29,7 @@ do
 #    echo "sigma1 " ${sigmaun} >> sortie/$img".txt"
     for sigmade in "${sigma2[@]}"
     do
-      ./bin/PNSR "images/formes2.pgm" "images/bilateral/"${img}"_"${sigmaun}"_"${sigmade}".pgm" >> images/comparaison/bilateral/comparaison.txt 
+      ./bin/PNSR "images/formes2.pgm" "images/comparaison/bilateral/"${img}"_"${sigmaun}"_"${sigmade}".pgm" >> images/comparaison/bilateral/comparaison.txt 
     done
   done
 

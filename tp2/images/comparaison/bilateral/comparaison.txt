@@ -1,2 +1,6 @@
 Durée du filtre bilatéral : 20.929760
 Durée du filtre bilatéral : 21.489705
+Durée du filtre bilatéral : 20.757524
+Durée du filtre bilatéral : 20.759817
+17.288719
+37.252798
