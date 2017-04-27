@@ -211,7 +211,6 @@ void filtre_nlmeans(char* imgOrigin, char* imgCible,
 }
 
 double EstimationBruit(char* imgOrigin, int t, double p){
-  /* TODO : prendre les bords en compte ! */
   int nL, nC;
   unsigned char **imO = NULL;
   imO = lectureimagepgm(imgOrigin, &nL, &nC);
@@ -254,7 +253,7 @@ double EstimationBruit(char* imgOrigin, int t, double p){
       }
       variance = (variance/n);
       variance -= moyenne*moyenne/(n*n);
-      histograme[(int) variance]++;
+      histograme[(int)variance]++;
     }
   }
 
@@ -263,7 +262,6 @@ double EstimationBruit(char* imgOrigin, int t, double p){
     for (int y=t; y<nC-t; y++){
       variance = 0;
       moyenne = 0;
-      //fprintf(stderr, "image %f \n", im2[x][y] );
       for(int i=x-t; i<=x+t; i++){
         for(int j = y-t; j<=y+t; j++){
           if(im2[i][j] > 255){
@@ -357,7 +355,6 @@ switch (choix) {
     printf("Durée de la méthode avec patch : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 5:
-  // Les globulesbb seg fault j
     printf("Entrez un entier pour la taille des blocs : ");
     scanf("%d", &taillebloc);
     printf("Entrez un double pour la valeur du pourcentile (ex : 5.0 pour 5 pourcent) : ");
