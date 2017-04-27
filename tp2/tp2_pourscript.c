@@ -318,7 +318,7 @@ switch (atoi(av[3])) {
     debut = clock();
     filtre_nlmeans(av[1], av[2], atof(av[4]), atof(av[5]), atof(av[6]));
     fin = clock();
-    printf("Durée de la méthode avec patch : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+    //printf("Durée de la méthode avec patch : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 5:
     debut = clock();

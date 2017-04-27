@@ -355,7 +355,6 @@ switch (choix) {
     printf("Durée de la méthode avec patch : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 5:
-  // Les globulesbb seg fault jsp pourquoi !
     printf("Entrez un entier pour la taille des blocs : ");
     scanf("%d", &taillebloc);
     printf("Entrez un double pour la valeur du pourcentile (ex : 5.0 pour 5 pourcent) : ");
