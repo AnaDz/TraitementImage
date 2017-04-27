@@ -1,0 +1,108 @@
+image  formes2pets1
+sigma1 15
+Durée du filtre bilatéral : 425.168191
+Durée du filtre bilatéral : 423.634422
+Durée du filtre bilatéral : 424.994673
+Durée du filtre bilatéral : 425.563634
+Durée du filtre bilatéral : 425.159271
+Durée du filtre bilatéral : 423.440561
+sigma1 3
+Durée du filtre bilatéral : 18.186604
+Durée du filtre bilatéral : 18.159216
+Durée du filtre bilatéral : 18.184100
+Durée du filtre bilatéral : 18.117762
+Durée du filtre bilatéral : 18.158030
+Durée du filtre bilatéral : 18.230199
+sigma1 5
+Durée du filtre bilatéral : 49.106595
+Durée du filtre bilatéral : 48.351851
+Durée du filtre bilatéral : 48.553719
+Durée du filtre bilatéral : 48.388280
+Durée du filtre bilatéral : 48.426032
+Durée du filtre bilatéral : 48.357351
+sigma1 7
+Durée du filtre bilatéral : 94.453445
+Durée du filtre bilatéral : 93.461919
+Durée du filtre bilatéral : 93.419851
+Durée du filtre bilatéral : 93.788884
+Durée du filtre bilatéral : 93.967392
+Durée du filtre bilatéral : 93.485942
+sigma1 10
+Durée du filtre bilatéral : 189.088621
+Durée du filtre bilatéral : 189.511356
+Durée du filtre bilatéral : 188.935185
+Durée du filtre bilatéral : 189.325962
+Durée du filtre bilatéral : 189.489960
+Durée du filtre bilatéral : 189.617937
+sigma1 15
+Durée du filtre bilatéral : 424.943983
+Durée du filtre bilatéral : 423.533232
+Durée du filtre bilatéral : 423.735749
+Durée du filtre bilatéral : 424.756811
+Durée du filtre bilatéral : 423.701420
+Durée du filtre bilatéral : 424.749708
+image  formes2pets1
+sigma1  15
+25.252431
+18.803614
+18.803607
+22.545089
+24.478575
+25.252431
+sigma1  3
+31.166147
+18.803614
+18.803614
+21.481420
+24.480098
+31.166147
+sigma1  5
+29.865745
+18.803614
+18.803654
+22.039438
+25.289599
+29.865745
+sigma1  7
+28.600621
+18.803614
+18.803640
+22.291468
+25.361296
+28.600621
+sigma1  10
+27.118518
+18.803614
+18.803611
+22.482996
+25.125662
+27.118518
+sigma1  15
+25.252431
+18.803614
+18.803607
+22.545089
+24.478575
+25.252431
+image  formes2pets1
+sigma1 3
+Durée du filtre bilatéral : 18.166894
+Durée du filtre bilatéral : 18.175335
+Durée du filtre bilatéral : 18.067891
+Durée du filtre bilatéral : 18.122304
+sigma1 3
+Durée du filtre bilatéral : 18.128262
+Durée du filtre bilatéral : 18.125305
+Durée du filtre bilatéral : 18.117798
+Durée du filtre bilatéral : 18.137274
+image  formes2pets1
+sigma1  3
+18.803614
+18.803614
+18.803614
+18.803614
+sigma1  3
+18.803614
+18.803614
+18.803614
+18.803614

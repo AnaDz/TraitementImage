@@ -1,0 +1,5 @@
+Durée du filtre médian : 0.060263
+Durée du filtre médian : 0.053588
+PNSR
+26.233561
+35.006837

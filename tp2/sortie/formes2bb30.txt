@@ -1,0 +1,82 @@
+image  formes2bb30
+sigma1 1
+Durée du filtre bilatéral : 2.726320
+Durée du filtre bilatéral : 2.762828
+Durée du filtre bilatéral : 2.860328
+Durée du filtre bilatéral : 2.883171
+Durée du filtre bilatéral : 2.796508
+Durée du filtre bilatéral : 2.841998
+Durée du filtre bilatéral : 2.894361
+Durée du filtre bilatéral : 2.877075
+Durée du filtre bilatéral : 2.856020
+sigma1 3
+Durée du filtre bilatéral : 20.484527
+Durée du filtre bilatéral : 20.510358
+Durée du filtre bilatéral : 20.825904
+Durée du filtre bilatéral : 20.509824
+Durée du filtre bilatéral : 20.453983
+Durée du filtre bilatéral : 20.747334
+Durée du filtre bilatéral : 20.595347
+Durée du filtre bilatéral : 20.458282
+Durée du filtre bilatéral : 20.344168
+sigma1 5
+Durée du filtre bilatéral : 54.528467
+Durée du filtre bilatéral : 54.158900
+Durée du filtre bilatéral : 54.764719
+Durée du filtre bilatéral : 54.151250
+Durée du filtre bilatéral : 54.580084
+Durée du filtre bilatéral : 54.581176
+Durée du filtre bilatéral : 54.653523
+Durée du filtre bilatéral : 54.018137
+Durée du filtre bilatéral : 54.057956
+sigma1 7
+Durée du filtre bilatéral : 102.831272
+Durée du filtre bilatéral : 104.070483
+Durée du filtre bilatéral : 104.542269
+Durée du filtre bilatéral : 105.313072
+Durée du filtre bilatéral : 104.838640
+Durée du filtre bilatéral : 104.464909
+Durée du filtre bilatéral : 105.523652
+Durée du filtre bilatéral : 104.892884
+Durée du filtre bilatéral : 105.031206
+image  formes2bb30
+sigma1  1
+18.615505
+18.635131
+18.684902
+18.894601
+20.039514
+21.712892
+24.856264
+26.715960
+27.904346
+sigma1  3
+18.629207
+18.703301
+18.839762
+19.294525
+21.264866
+23.765011
+28.101434
+30.405505
+31.298173
+sigma1  5
+18.632208
+18.725353
+18.880374
+19.372500
+21.390691
+23.852779
+27.924591
+29.742763
+30.073350
+sigma1  7
+18.629665
+18.730706
+18.891697
+19.385842
+21.365300
+23.732928
+27.471630
+28.871609
+28.859554

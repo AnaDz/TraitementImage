@@ -238,7 +238,7 @@ double EstimationBruit(char* imgOrigin, int t, double p){
 
  for (int x=0; x<t; x++){
     for(int y=0; y<t; y++){
-      n =(double) (x+t)*(y+t);
+      n =(double) (x+t+1)*(y+t+1);
       variance = 0;
       moyenne = 0;
       for (int i =0; i<=x+t; i++){
@@ -357,7 +357,7 @@ switch (choix) {
     printf("Durée de la méthode avec patch : %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   case 5:
-  // Les globulesbb seg fault jsp pourquoi !
+  // Les globulesbb seg fault j
     printf("Entrez un entier pour la taille des blocs : ");
     scanf("%d", &taillebloc);
     printf("Entrez un double pour la valeur du pourcentile (ex : 5.0 pour 5 pourcent) : ");

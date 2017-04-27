@@ -1,0 +1,57 @@
+image formes2bb30.pgm
+bruit : 9984.680000 
+Durée de l'estimation du bruit: 0.477512
+image globulesbb50.pgm
+bruit : 12792.730000 
+Durée de l'estimation du bruit: 2.049313
+image formes2bb40b.pgm
+bruit : 11652.560000 
+Durée de l'estimation du bruit: 0.468902
+image formes2bb40.pgm
+bruit : 11653.690000 
+Durée de l'estimation du bruit: 0.468876
+image formes2bb10b.pgm
+bruit : 2586.570000 
+Durée de l'estimation du bruit: 0.483590
+image formes2bb50b.pgm
+bruit : 12837.930000 
+Durée de l'estimation du bruit: 0.467728
+image formes2bb10.pgm
+bruit : 2595.610000 
+Durée de l'estimation du bruit: 0.487887
+image formes2bb50.pgm
+bruit : 12886.520000 
+Durée de l'estimation du bruit: 0.469493
+image formes2bb15b.pgm
+bruit : 4843.180000 
+Durée de l'estimation du bruit: 0.493567
+image formes2bb67b.pgm
+bruit : 13687.690000 
+Durée de l'estimation du bruit: 0.489188
+image formes2bb15.pgm
+bruit : 4910.980000 
+Durée de l'estimation du bruit: 0.518496
+image formes2bb67.pgm
+bruit : 14739.720000 
+Durée de l'estimation du bruit: 0.475267
+image globulesbb10.pgm
+bruit : 2573.010000 
+Durée de l'estimation du bruit: 2.053807
+image formes2bb25b.pgm
+bruit : 8585.740000 
+Durée de l'estimation du bruit: 0.487915
+image formes2bb90b.pgm
+bruit : 14358.910000 
+Durée de l'estimation du bruit: 0.493685
+image globulesbb25.pgm
+bruit : 8526.980000 
+Durée de l'estimation du bruit: 2.117253
+image formes2bb30b.pgm
+bruit : 9880.720000 
+Durée de l'estimation du bruit: 0.471447
+image formes2bb90.pgm
+bruit : 14923.910000 
+Durée de l'estimation du bruit: 0.474755
+image globulesbb26.pgm
+bruit : 8722.470000 
+Durée de l'estimation du bruit: 2.216998

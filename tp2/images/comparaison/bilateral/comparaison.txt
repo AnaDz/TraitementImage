@@ -1,0 +1,2 @@
+Durée du filtre bilatéral : 20.929760
+Durée du filtre bilatéral : 21.489705

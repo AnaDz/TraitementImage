@@ -1,0 +1,108 @@
+image  formes2bb40b
+sigma1 15
+Durée du filtre bilatéral : 463.918864
+Durée du filtre bilatéral : 462.189290
+Durée du filtre bilatéral : 462.313804
+Durée du filtre bilatéral : 469.637221
+Durée du filtre bilatéral : 464.221243
+Durée du filtre bilatéral : 466.686957
+sigma1 3
+Durée du filtre bilatéral : 20.333124
+Durée du filtre bilatéral : 20.323524
+Durée du filtre bilatéral : 20.287941
+Durée du filtre bilatéral : 20.291332
+Durée du filtre bilatéral : 20.207667
+Durée du filtre bilatéral : 20.293609
+sigma1 5
+Durée du filtre bilatéral : 53.894917
+Durée du filtre bilatéral : 53.961404
+Durée du filtre bilatéral : 53.702826
+Durée du filtre bilatéral : 53.733497
+Durée du filtre bilatéral : 53.706086
+Durée du filtre bilatéral : 53.666609
+sigma1 7
+Durée du filtre bilatéral : 104.930784
+Durée du filtre bilatéral : 103.421416
+Durée du filtre bilatéral : 103.674660
+Durée du filtre bilatéral : 103.367716
+Durée du filtre bilatéral : 103.331471
+Durée du filtre bilatéral : 103.281028
+sigma1 10
+Durée du filtre bilatéral : 207.878439
+Durée du filtre bilatéral : 207.399557
+Durée du filtre bilatéral : 207.745658
+Durée du filtre bilatéral : 207.932842
+Durée du filtre bilatéral : 208.588165
+Durée du filtre bilatéral : 209.021529
+sigma1 15
+Durée du filtre bilatéral : 461.637155
+Durée du filtre bilatéral : 467.458217
+Durée du filtre bilatéral : 465.673260
+Durée du filtre bilatéral : 463.983201
+Durée du filtre bilatéral : 464.723187
+Durée du filtre bilatéral : 465.274769
+image  formes2bb40b
+sigma1  15
+25.069104
+16.785439
+17.971493
+22.643791
+23.743673
+25.069104
+sigma1  3
+29.100533
+16.732424
+17.972714
+23.580985
+25.250683
+29.100533
+sigma1  5
+28.589307
+16.788315
+18.081799
+23.652951
+25.259024
+28.589307
+sigma1  7
+27.754842
+16.801901
+18.085403
+23.480458
+24.977331
+27.754842
+sigma1  10
+26.613656
+16.800308
+18.048485
+23.161735
+24.497031
+26.613656
+sigma1  15
+25.069104
+16.785439
+17.971493
+22.643791
+23.743673
+25.069104
+image  formes2bb40b
+sigma1 3
+Durée du filtre bilatéral : 20.571111
+Durée du filtre bilatéral : 20.687539
+Durée du filtre bilatéral : 20.297589
+Durée du filtre bilatéral : 20.526313
+sigma1 3
+Durée du filtre bilatéral : 20.641980
+Durée du filtre bilatéral : 20.564525
+Durée du filtre bilatéral : 19.976491
+Durée du filtre bilatéral : 20.301466
+image  formes2bb40b
+sigma1  3
+16.421327
+16.362970
+16.387837
+16.421327
+sigma1  3
+16.421327
+16.362970
+16.387837
+16.421327

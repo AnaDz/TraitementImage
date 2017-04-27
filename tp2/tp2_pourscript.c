@@ -238,7 +238,7 @@ double EstimationBruit(char* imgOrigin, int t, double p){
 
  for (int x=0; x<t; x++){
     for(int y=0; y<t; y++){
-      n =(double) (x+t)*(y+t);
+      n =(double) (x+t+1)*(y+t+1);
       variance = 0;
       moyenne = 0;
       for (int i =0; i<=x+t; i++){
@@ -323,14 +323,13 @@ switch (atoi(av[3])) {
   case 5:
     debut = clock();
     double bruit = EstimationBruit(av[1], atoi(av[4]), atof(av[5]));
-    fprintf(stdout, "bruit : %f \n", bruit);
+    fprintf(stdout, "%f \n", bruit);
     fin = clock();
-    printf("Durée de l'estimation du bruit: %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
+//    printf("Durée de l'estimation du bruit: %f\n", ((double) fin-debut)/CLOCKS_PER_SEC);
     break;
   default:
     printf("Vous avez entré un mauvais chiffre, au revoir ! :) \n" );
     break;
 }
-printf("Au revoir !\n");
 return EXIT_SUCCESS;
 }
