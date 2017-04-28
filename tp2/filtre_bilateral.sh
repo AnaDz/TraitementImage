@@ -1,6 +1,6 @@
 #! /bin/bash
 # Estimateur fait pour bruit blanc !
-Imgform2=("formes2bb40" "formes2bb10")
+Imgform2=("formes2sp1" "formes2sp2")
 
 sigma1=("3")
 sigma2=("15")
@@ -29,7 +29,7 @@ do
 #    echo "sigma1 " ${sigmaun} >> sortie/$img".txt"
     for sigmade in "${sigma2[@]}"
     do
-      ./bin/PNSR "images/formes2.pgm" "images/comparaison/bilateral/"${img}"_"${sigmaun}"_"${sigmade}".pgm" >> images/comparaison/bilateral/comparaison.txt 
+      ./bin/PNSR "images/formes2.pgm" "images/comparaison/bilateral/"${img}"_"${sigmaun}"_"${sigmade}".pgm" >> images/comparaison/bilateral/comparaison.txt
     done
   done
 
